@@ -33,7 +33,7 @@ ECHO dst path = %dst%
 ECHO Copy DONE!
 
 REM =========================================
-REM | 	PUSH TO PERSONAL GIT REPOSITORY 	|
+REM | 	UPDATE RELATIVE HYPERLINKS IN HTML 	|
 REM =========================================
 
 
@@ -49,6 +49,22 @@ REM call python script to update references
 SET "pyd=update_cv_links.py"
 
 python %pyd%
+
+REM =========================================
+REM | 	 PUSH TO PUBLIC GIT REPOSITORY   	|
+REM =========================================
+
+ECHO working in folder: [%cd%]
+
+REM make sure all has been updated
+
+SET "fixed=synced from working version on "
+SET "mydatetime=%date%-%time%"
+SET "msg=%fixed%%mydatetime%"
+
+git add .
+git commit -am "%msg%"
+git push
 
 REM go back to the original folder
 
