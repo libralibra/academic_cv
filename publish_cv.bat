@@ -22,11 +22,11 @@ ROBOCOPY "%srccv%" "%dst%" /e /z /pf /eta /nfl /ndl /nc /ns /njh /xd ".github" "
 
 REM copy css and js to components folder 
 
-XCOPY /Y /F "%srccss%\cv.css" "%dstcss%\cv.css" 
-XCOPY /Y /F "%srccss%\reveal.css" "%dstcss%\reveal.css"
-XCOPY /Y /F "%srcjs%\cv.js" "%dstcss%\cv.js" 
-XCOPY /Y /F "%srcjs%\pub_list.js" "%dstcss%\pub_list.js"
-XCOPY /Y /F "%srcjs%\ref_list.js" "%dstcss%\ref_list.js"
+XCOPY /Y /F /Q "%srccss%\cv.css" "%dstcss%\cv.css" 
+XCOPY /Y /F /Q "%srccss%\reveal.css" "%dstcss%\reveal.css"
+REM XCOPY /Y /F /Q "%srcjs%\cv.js" "%dstcss%\cv.js" 
+XCOPY /Y /F /Q "%srcjs%\pub_list.js" "%dstcss%\pub_list.js"
+XCOPY /Y /F /Q "%srcjs%\ref_list.js" "%dstcss%\ref_list.js"
 
 ECHO src path = %src%
 ECHO dst path = %dst%
