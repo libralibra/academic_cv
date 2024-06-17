@@ -1,8 +1,8 @@
 @ECHO off
 
-REM =========================================
-REM | 	COPY FILES FROM PRIVATE TO PUBLIC	|
-REM =========================================
+ECHO =========================================
+ECHO  COPY FILES FROM PRIVATE TO PUBLIC 
+ECHO =========================================
 
 REM copy the cv related files from personal git repo
 REM copy css/js/logo/doc/imgs and then update the links
@@ -32,9 +32,9 @@ ECHO src path = %src%
 ECHO dst path = %dst%
 ECHO Copy DONE!
 
-REM =========================================
-REM | 	UPDATE RELATIVE HYPERLINKS IN HTML 	|
-REM =========================================
+ECHO =========================================
+ECHO  UPDATE RELATIVE HYPERLINKS IN HTML 
+ECHO =========================================
 
 
 REM move the target folder 
@@ -50,9 +50,9 @@ SET "pyd=update_cv_links.py"
 
 python %pyd%
 
-REM =========================================
-REM | 	 PUSH TO PUBLIC GIT REPOSITORY   	|
-REM =========================================
+ECHO =========================================
+ECHO  PUSH TO PUBLIC GIT REPOSITORY 
+ECHO =========================================
 
 ECHO working in folder: [%cd%]
 
