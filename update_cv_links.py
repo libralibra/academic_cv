@@ -20,7 +20,8 @@ links = {'<link rel="stylesheet" href="../../assets/dist/css/reveal.css">': '<li
 def update_html(fname, old_str, new_str):
     with open(fname, 'r') as f:
         content = f.read()
-    content = content.replace(old_str, new_str)
+    if new_str not in content:
+        content = content.replace(old_str, new_str)
     with open(fname, 'w') as f:
         f.write(content)
 
