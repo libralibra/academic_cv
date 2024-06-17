@@ -2,11 +2,11 @@
 <html lang="en">
 
     <head>
-        <title>Dr Xu Zhang (Daniel) - Senior Lecturer in AI/ML, MSc Course & Module Leader, PhD, MBCS</title>
+        <title>Dr Xu Zhang (Daniel) - Senior Lecturer in AI</title>
         <meta charset="UTF-8">
         <meta name="author" content="Dr Daniel Zhang">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+        
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
         <link rel="stylesheet" href="./components/reveal.css">
         <link rel="stylesheet" href="./components/cv.css">
@@ -16,7 +16,7 @@
 
     <body class="cv">
         <header class="cv">
-            <h1 class="caption"><a href="https://www.falmouth.ac.uk/staff/dr-daniel-zhang" title="visit Dr Xu Zhang's university profile page" target="_blank">Dr Xu Zhang</a><br>
+            <h1 class="caption">Dr Xu Zhang<br>
                 <a href="img/zhang1.wav" target="_blank" title="Zhang1"><img class="img-zoom-15" src="img/zhang.gif" height="40" title="click to listen to the sound clip of surname" /></a>&nbsp;
                 <a href="img/xu4.wav" target="_blank" title="Xu4"><img class="img-zoom-15" src="img/xu.gif" height="40" title="click to listen to the sound clip of given name" /></a>
             </h1>
@@ -37,13 +37,11 @@
                 <table class="img-width-300" style="left: 10%;">
                     <tr>
                         <td><i class="fa fa-envelope fa-5x" aria-hidden="true"></i><br>
-                            <!-- <button id="email_btn_me" onclick="revealInfo('email_btn_me','email_me')">Reveal Email</button> -->
-                            <span id="email_me"></span>
+                            <!-- <button id="email_btn_me" class="hidden-item" onclick="revealInfo('email_btn_me','email_me')">Reveal Email</button> --> <span id="email_me" class="hidden-item"></span>
                         </td>
                         <td>
                             <i class="fa fa-phone-square fa-5x" aria-hidden="true"></i><br>
-                            <!-- <button id="phone_btn_me" onclick="revealInfo('phone_btn_me','phone_me')">Reveal Number</button> -->
-                            <span id="phone_me" class="darkblue"></span>
+                            <!-- <button id="phone_btn_me" class="hidden-item" onclick="revealInfo('phone_btn_me','phone_me')">Reveal Number</button> --> <span id="phone_me" class="hidden-item darkblue"></span>
                         </td>
                     </tr>
                 </table>
@@ -421,18 +419,5 @@
     </body>
 
     <script src="./components/cv.js"></script>
-
-    <script>
-        // update version string automatically, last modified year+month
-        document.querySelectorAll('span#version').forEach(function (element) {
-            let dateObj = new Date(document.lastModified);
-            // month start from 0
-            let month = dateObj.getUTCMonth() + 1;
-            // padding 0 if needed
-            let pMonth = month.toString().padStart(2, "0")
-            let year = dateObj.getUTCFullYear();
-            element.innerHTML = year + '.' + pMonth;
-        });
-    </script>
 
 </html>
