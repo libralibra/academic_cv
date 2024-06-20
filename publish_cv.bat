@@ -18,7 +18,7 @@ REM check help file for all options, /n* excludes certain log information
 
 REM copy html and folders
 
-ROBOCOPY "%srccv%" "%dst%" /e /z /pf /eta /nfl /ndl /nc /ns /njh /xd ".github" ".git"
+ROBOCOPY "%srccv%" "%dst%" /e /z /pf /eta /nfl /ndl /nc /ns /njh /xd ".github" ".git" "*.doc" "*.docx" "*.pdf"
 
 REM copy css and js to components folder 
 

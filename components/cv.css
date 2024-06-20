@@ -168,15 +168,15 @@ main,
 }
 
 .left-column {
-    width: 25%;
+    width: 15%;
     /* background-color: #f2f2f2; */
-    padding: 10px;
-    margin-right: 10px;
+    padding: 5px;
+    margin-right: 5px;
     text-align: center;
 }
 
 .right-column {
-    width: 67%;
+    width: 75%;
     /* background-color: #e6e6e6; */
     padding: 10px;
 }
@@ -222,4 +222,8 @@ main,
 
 .blue {
     color: dodgerblue;
+}
+
+table {
+    margin: 0 auto;
 }
