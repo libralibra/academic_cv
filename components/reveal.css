@@ -247,15 +247,16 @@ darkpurple {
 }
 
 ::-webkit-scrollbar {
-    width: 6px;
+    width: 10px;
 }
 
 ::-webkit-scrollbar-track {
     -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: #333;
+    background-color: #7e7e7e;
 }
 
 ::-webkit-scrollbar-corner {
@@ -263,6 +264,36 @@ darkpurple {
 }
 
 /* scrollable if content is too long */
+
+/*********************************************
+ * Frame helper
+ *********************************************/
+.reveal .r-frame {
+    border: 4px solid var(--r-main-color);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+}
+
+.reveal .r-frame-red {
+    border: 4px solid var(--red);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+}
+
+/* title or section header, compare to r-fit-text, it's not that big */
+.reveal .r-frame-text {
+    /* border: 4px solid var(--r-main-color); */
+    font-size: 3em;
+    border: thick double rgb(153, 153, 153);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+}
+
+.reveal a .r-frame {
+    transition: all 0.15s linear;
+}
+
+.reveal a:hover .r-frame {
+    border-color: var(--r-link-color);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.55);
+}
 
 /* custom fragment blur */
 .reveal .fragment.blur {
@@ -290,94 +321,114 @@ darkpurple {
 
 /* custom fragment line-below (underline has been used) */
 .reveal .fragment.line-below,
-.reveal .fragment.line-red {
+.reveal .fragment.line-red,
+.reveal .fragment.red-line {
     text-decoration: none;
 }
 
 .reveal .fragment.line-below.visible,
-.reveal .fragment.line-red.visible {
+.reveal .fragment.line-red.visible,
+.reveal .fragment.red-line.visible {
     text-decoration: underline;
     text-decoration-color: var(--red);
     text-decoration-thickness: 12%;
 }
 
-.reveal .fragment.line-blue {
+.reveal .fragment.line-blue,
+.reveal .fragment.blue-line {
     text-decoration: none;
 }
 
-.reveal .fragment.line-blue.visible {
+.reveal .fragment.line-blue.visible,
+.reveal .fragment.blue-line.visible {
     text-decoration: underline;
     text-decoration-color: var(--blue);
     text-decoration-thickness: 12%;
 }
 
-.reveal .fragment.line-green {
+.reveal .fragment.line-green,
+.reveal .fragment.green-line {
     text-decoration: none;
 }
 
-.reveal .fragment.line-green.visible {
+.reveal .fragment.line-green.visible,
+.reveal .fragment.green-line.visible {
     text-decoration: underline;
     text-decoration-color: var(--green);
     text-decoration-thickness: 12%;
 }
 
-.reveal .fragment.yellow-green {
+.reveal .fragment.yellow-line,
+.reveal .fragment.line-yellow {
     text-decoration: none;
 }
 
-.reveal .fragment.line-yellow.visible {
+.reveal .fragment.line-yellow.visible,
+.reveal .fragment.yellow-line.visible {
     text-decoration: underline;
     text-decoration-color: var(--yellow);
     text-decoration-thickness: 12%;
 }
 
-.reveal .fragment.purple-green {
+.reveal .fragment.purple-line,
+.reveal .fragment.line-purple {
     text-decoration: none;
 }
 
-.reveal .fragment.line-purple.visible {
+.reveal .fragment.line-purple.visible,
+.reveal .fragment.purple-line.visible {
     text-decoration: underline;
     text-decoration-color: var(--purple);
     text-decoration-thickness: 12%;
 }
 
-.reveal .fragment.line-cyan {
+.reveal .fragment.line-cyan,
+.reveal .fragment.cyan-line {
     text-decoration: none;
 }
 
-.reveal .fragment.line-cyan.visible {
+.reveal .fragment.line-cyan.visible,
+.reveal .fragment.cyan-line.visible {
     text-decoration: underline;
     text-decoration-color: var(--cyan);
     text-decoration-thickness: 12%;
 }
 
-.reveal .fragment.line-pink {
+.reveal .fragment.line-pink,
+.reveal .fragment.pink-line {
     text-decoration: none;
 }
 
-.reveal .fragment.line-pink.visible {
+.reveal .fragment.line-pink.visible,
+.reveal .fragment.pink-line.visible {
     text-decoration: underline;
     text-decoration-color: var(--pink);
     text-decoration-thickness: 12%;
 }
 
-.reveal .fragment.line-brown {
+.reveal .fragment.line-brown,
+.reveal .fragment.brown-line {
     text-decoration: none;
 }
 
-.reveal .fragment.line-brown.visible {
+.reveal .fragment.line-brown.visible,
+.reveal .fragment.brown-line.visible {
     text-decoration: underline;
     text-decoration-color: var(--brown);
     text-decoration-thickness: 12%;
 }
 
 .reveal .fragment.line-orange,
-.reveal .fragment.line-golden {
+.reveal .fragment.line-golden,
+.reveal .fragment.orange-line,
+.reveal .fragment.golden-line {
     text-decoration: none;
 }
 
 .reveal .fragment.line-orange.visible,
-.reveal .fragment.line-golden.visible {
+.reveal .fragment.line-golden.visible,
+.reveal .fragment.orange-line.visible,
+.reveal .fragment.golden-line.visible {
     text-decoration: underline;
     text-decoration-color: var(--orange);
     text-decoration-thickness: 12%;
@@ -470,95 +521,95 @@ darkpurple {
 
 /* custom fragment red box */
 .reveal .fragment.red-box {
-    text-decoration: none;
+    border: none;
 }
 
 .reveal .fragment.red-box.visible {
-    text-decoration: underline overline dashed;
-    text-decoration-color: var(--red);
-    text-decoration-thickness: 10%;
+    border: 3px solid var(--red);
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 .reveal .fragment.blue-box {
-    text-decoration: none;
+    border: none;
 }
 
 .reveal .fragment.blue-box.visible {
-    text-decoration: underline overline dashed;
-    text-decoration-color: var(--blue);
-    text-decoration-thickness: 10%;
+    border: 3px solid var(--blue);
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 .reveal .fragment.green-box {
-    text-decoration: none;
+    border: none;
 }
 
 .reveal .fragment.green-box.visible {
-    text-decoration: underline overline dashed;
-    text-decoration-color: var(--green);
-    text-decoration-thickness: 10%;
+    border: 3px solid var(--green);
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 .reveal .fragment.yellow-box {
-    text-decoration: none;
+    border: none;
 }
 
 .reveal .fragment.yellow-box.visible {
-    text-decoration: underline overline dashed;
-    text-decoration-color: var(--yellow);
-    text-decoration-thickness: 10%;
+    border: 3px solid var(--yellow);
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 .reveal .fragment.purple-box {
-    text-decoration: none;
+    border: none;
 }
 
 .reveal .fragment.purple-box.visible {
-    text-decoration: underline overline dashed;
-    text-decoration-color: var(--purple);
-    text-decoration-thickness: 10%;
+    border: 3px solid var(--purple);
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 .reveal .fragment.cyan-box {
-    text-decoration: none;
+    border: none;
 }
 
 .reveal .fragment.cyan-box.visible {
-    text-decoration: underline overline dashed;
-    text-decoration-color: var(--cyan);
-    text-decoration-thickness: 10%;
+    border: 3px solid var(--cyan);
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 .reveal .fragment.pink-box {
-    text-decoration: none;
+    border: none;
 }
 
 .reveal .fragment.pink-box.visible {
-    text-decoration: underline overline dashed;
-    text-decoration-color: var(--pink);
-    text-decoration-thickness: 10%;
+    border: 3px solid var(--pink);
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 .reveal .fragment.brown-box {
-    text-decoration: none;
+    border: none;
 }
 
 .reveal .fragment.brown-box.visible {
-    text-decoration: underline overline dashed;
-    text-decoration-color: var(--brown);
-    text-decoration-thickness: 10%;
+    border: 3px solid var(--brown);
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 .reveal .fragment.golden-box,
 .reveal .fragment.orange-box {
-    text-decoration: none;
+    border: none;
 }
 
 .reveal .fragment.golden-box.visible,
 .reveal .fragment.orange-box.visible {
-    text-decoration: underline overline dashed;
-    text-decoration-color: var(--golden);
-    text-decoration-thickness: 10%;
+    border: 3px solid var(--orange);
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 /* custom fragment red box */
@@ -634,6 +685,10 @@ darkpurple {
     margin: 3px !important;
 }
 
+.box-float {
+    position: absolute !important;
+}
+
 .float-left,
 .left-float {
     position: absolute !important;
@@ -670,6 +725,13 @@ darkpurple {
     right: 0px !important;
 }
 
+.box-see-through,
+.see-through-box,
+.box-transparent,
+.transparent-box {
+    background-color: transparent !important;
+}
+
 .box-top-right,
 .box-right-top {
     position: absolute !important;
@@ -695,7 +757,9 @@ darkpurple {
 .box-mid,
 .box-middle,
 .box-center2,
-.box-centre2 {
+.box-centre2,
+.centre-box2,
+.center-box2 {
     /* border: 5px solid; */
     position: absolute !important;
     top: 53%;
@@ -3000,8 +3064,8 @@ table thead {
 }
 
 .img-square-350 {
-    height: 350 !important;
-    width: 350 !important;
+    height: 350px !important;
+    width: 350px !important;
 }
 
 .img-square-400 {
@@ -3010,13 +3074,18 @@ table thead {
 }
 
 .img-square-450 {
-    height: 450 !important;
-    width: 450 !important;
+    height: 450px !important;
+    width: 450px !important;
 }
 
 .img-square-500 {
     height: 500px !important;
     width: 500px !important;
+}
+
+.img-square-550 {
+    height: 550px !important;
+    width: 550px !important;
 }
 
 .img-height-20 {
@@ -3286,7 +3355,6 @@ html.print-pdf .pdf_div {
 .pdf_link:hover {
     color: lime;
     border: 5px solid lime;
-
 }
 
 
@@ -3436,19 +3504,21 @@ a.roll span:after {
 /* print-pdf page scroll bar style */
 /* the whole scroll bar */
 html.print-pdf body::-webkit-scrollbar {
-    width: 15px;
+    width: 20px;
 }
 
 /* scroll track */
 html.print-pdf body::-webkit-scrollbar-track {
-    background: black;
+    background: rgb(118, 118, 118);
     box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
 }
 
 /* scroll button */
 html.print-pdf body::-webkit-scrollbar-thumb {
-    border-radius: 5px;
+    border-radius: 10px;
     /* button colour */
+    background: #e9e6e6;
     background-color: #e9e6e6;
     /* the first colour is the progress colour */
     box-shadow: 0 -100vh 0 100vh gray, 0 0 15px 5px black;
@@ -3658,7 +3728,7 @@ html.reveal-full-page {
 
 /* change default fragment to fade-down rather than fade-in */
 .reveal .fragment {
-    transition: all .2s ease;
+    transition: all .1s ease;
     /* transition: all .2s translate(0, -40px); */
 }
 
@@ -3782,7 +3852,7 @@ html.reveal-full-page {
 }
 
 .reveal .fragment.fade-in-then-semi-out.visible {
-    opacity: .5;
+    opacity: .3;
     visibility: inherit;
 }
 
