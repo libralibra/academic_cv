@@ -3321,6 +3321,7 @@ table thead {
 /* pdf download corner, position only, the colour is different for 
     each theme */
 .pdf_div {
+    background-color: var(--r-background-color);
     /* hide the overflow part */
     width: 200px;
     height: 200px;
@@ -3336,26 +3337,22 @@ html.print-pdf .pdf_div {
 }
 
 .pdf_div .pdf_link {
+    background-color: var(--r-background-color);
     text-align: center;
     text-shadow: #333333;
     position: absolute;
-    color: orange;
     /* will affect the corner bar display */
     width: 80%;
     height: 50px;
     line-height: 50px;
-    font-size: 2.2em;
-    top: 5px;
-    left: 40%;
+    font-size: 1.75em;
+    top: 4px;
+    left: 38%;
     transform: rotate(45deg);
-    border: 5px solid orange;
     z-index: 2;
 }
 
-.pdf_link:hover {
-    color: lime;
-    border: 5px solid lime;
-}
+
 
 
 /* add tooltip */
