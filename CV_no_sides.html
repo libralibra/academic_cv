@@ -196,8 +196,8 @@
 
     <script src="./components/cv.js"></script>
 
+    <!-- update version string automatically, last modified year+month -->
     <script>
-        // update version string automatically, last modified year+month
         document.querySelectorAll('span#version').forEach(function (element) {
             let dateObj = new Date(document.lastModified);
             // month start from 0
@@ -208,5 +208,18 @@
             element.innerHTML = year + '.' + pMonth;
         });
     </script>
+
+    <!-- Default Statcounter code for Academic CV
+    https://libralibra.github.io/academic_cv/ -->
+    <script type="text/javascript">
+        var sc_project = 8407717;
+        var sc_invisible = 1;
+        var sc_security = "d3d32ecd"; 
+    </script>
+    <script type="text/javascript" src="https://www.statcounter.com/counter/counter.js" async></script>
+    <noscript>
+        <div class="statcounter"><a title="Web Analytics" href="https://statcounter.com/" target="_blank"><img class="statcounter" src="https://c.statcounter.com/8407717/0/d3d32ecd/1/" alt="Web Analytics" referrerPolicy="no-referrer-when-downgrade"></a></div>
+    </noscript>
+    <!-- End of Statcounter Code -->
 
 </html>
