@@ -1,7 +1,10 @@
 // write the publication list to both versions of cv 
 // Daniel Zhang, June 2024
 
-document.write(`<article>
+// only works for the webpages that contains publication sections
+if (window.location.href.indexOf("index.html") > -1 ||
+    window.location.href.indexOf("CV_no_sides.html") > -1) {
+    document.write(`<article>
                 <h3 class=" caption">Publication List</h3>
                 <hr width="100%;" color="gray" size="3">
 
@@ -39,3 +42,24 @@ document.write(`<article>
                     <li>Xu Zhang, Shujun Zhang (2010). "Face detection in colour images based on skin colour model and eye detection". Proceeding of 3rd International Conference of Bionic Engineering, 14-16th September, Zhuhai, China.</li>
                 </ol>
             </article>`);
+}
+
+// to avoid reveal personal information, put the goto top button in this js file
+// and remove the other js completely in the public repository
+// When the user scrolls down 50px from the top of the document, show the button
+let mybutton = document.getElementById("myBtn");
+window.onscroll = function () { scrollFunction() };
+
+function scrollFunction() {
+    if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+        mybutton.style.display = "block";
+    } else {
+        mybutton.style.display = "none";
+    }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+}
