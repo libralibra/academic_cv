@@ -241,13 +241,13 @@ darkpurple {
 /* customised colour tags */
 
 /* make mermaid flowchart nodes bigger */
-.node.flowchart-label>rect {
+/* .node.flowchart-label>rect {
     height: 50px;
 }
 
 div.mermaid .flowchart-label foreignObject {
     height: 50px;
-}
+} */
 
 /* scrollable if content is too long */
 .scrollable-slide {
@@ -292,6 +292,7 @@ div.mermaid .flowchart-label foreignObject {
     /* border: 4px solid var(--r-main-color); */
     font-size: 3em;
     border: thick double rgb(153, 153, 153);
+    border-radius: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
 }
 
@@ -670,9 +671,17 @@ div.mermaid .flowchart-label foreignObject {
     z-index: 1000 !important;
 }
 
+.indented {
+    padding-left: 40px;
+    text-indent: -40px;
+}
+
 /* left, right align */
 .text-left,
-.left-text {
+.left-text,
+.like-li,
+.like-li-2,
+.like-li-3 {
     text-align: left !important;
 }
 
@@ -979,6 +988,10 @@ bigtext2 {
     font-size: 3em !important;
 }
 
+.normaltext {
+    font-size: normal !important;
+}
+
 .mediumtext,
 mediumtext {
     font-size: 0.8em !important;
@@ -1094,17 +1107,23 @@ table thead {
 .img-enhance-130,
 .img-contrast,
 .img-contrast-130 {
-    filter: contrast(130%) !important;
+    filter: contrast(1.2) saturate(200%) brightness(0.8) !important;
+    mix-blend-mode: luminosity;
+    -webkit-filter: contrast(1.2) saturate(200%) !important;
 }
 
 .img-enhance-150,
 .img-contrast-150 {
-    filter: contrast(150%) !important;
+    filter: contrast(1.5) saturate(200%) !important;
+    mix-blend-mode: luminosity;
+    -webkit-filter: contrast(1.5) saturate(200%) !important;
 }
 
 .img-enhance-200,
 .img-contrast-200 {
-    filter: contrast(200%) !important;
+    filter: contrast(2.0) saturate(200%) !important;
+    mix-blend-mode: luminosity;
+    -webkit-filter: contrast(2.0) saturate(200%) !important;
 }
 
 .img-bright-250 {
@@ -1114,6 +1133,10 @@ table thead {
 .img-darken,
 .img-darken-30 {
     filter: brightness(30%) !important;
+}
+
+.img-darken-50 {
+    filter: brightness(50%) !important;
 }
 
 .img-darken-90 {
@@ -1131,6 +1154,7 @@ table thead {
 .img-sharpen {
     mix-blend-mode: luminosity;
     image-rendering: pixelated;
+    filter: saturate(200%) !important;
 }
 
 .img-shadow {
@@ -4029,6 +4053,7 @@ html.reveal-full-page {
 
 .reveal .fragment.grow {
     opacity: 1;
+    transform: scale(1.0);
     visibility: inherit;
 }
 
