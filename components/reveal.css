@@ -4053,7 +4053,7 @@ html.reveal-full-page {
 
 .reveal .fragment.grow {
     opacity: 1;
-    transform: scale(1.0);
+    /* transform: scale(1.0); */
     visibility: inherit;
 }
 
