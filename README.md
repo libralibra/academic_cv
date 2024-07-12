@@ -1,1 +1,3 @@
-My academic CV
+This repository holds my academic CV
+
+**All Rights Reserved**
