@@ -994,14 +994,14 @@ bigtext2 {
 
 .mediumtext,
 mediumtext {
-    font-size: 0.8em !important;
-    line-height: 0.9;
+    font-size: 0.9em !important;
+    line-height: 0.95;
 }
 
 .mediumtext9,
 mediumtext9 {
-    font-size: 0.9em !important;
-    /* line-height: 0.9; */
+    font-size: 0.99em !important;
+    line-height: 0.99;
 }
 
 .smalltext,
@@ -1016,6 +1016,7 @@ tinytext {
     line-height: 0.5;
 }
 
+.normal-line-height,
 .normal-line-height-10 {
     line-height: 1.0;
 }
