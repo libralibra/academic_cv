@@ -668,7 +668,7 @@ div.mermaid .flowchart-label foreignObject {
 
 /* top most element */
 .top-most {
-    z-index: 1000 !important;
+    z-index: 9999 !important;
 }
 
 .back-most {
