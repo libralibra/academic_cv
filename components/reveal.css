@@ -671,6 +671,10 @@ div.mermaid .flowchart-label foreignObject {
     z-index: 1000 !important;
 }
 
+.back-most {
+    z-index: -999 !important;
+}
+
 .indented {
     padding-left: 40px;
     text-indent: -40px;
@@ -3484,6 +3488,16 @@ table thead {
 .img-width-100p {
     max-width: 100% !important;
     width: 100% !important;
+}
+
+.img-width-1 {
+    max-width: 1px !important;
+    width: 1px !important;
+}
+
+.img-width-10 {
+    max-width: 10px !important;
+    width: 10px !important;
 }
 
 .img-width-20 {
