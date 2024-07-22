@@ -877,6 +877,10 @@ div.mermaid .flowchart-label foreignObject {
     background-color: var(--orange);
 }
 
+.reveal .darkorange-bg {
+    background-color: var(--darkorange);
+}
+
 .reveal .skyblue-bg {
     background-color: var(--skyblue);
 }
@@ -3685,25 +3689,26 @@ html.print-pdf .pdf_div {
 .tooltip-text {
     visibility: hidden;
     position: absolute;
-    margin-top: 80px;
-    margin-left: -300px;
+    margin-top: 5%;
+    margin-left: -20%;
     z-index: 20;
-    width: 400px;
+    /* width: 400px; */
     color: white;
     font-size: 30px;
-    background-color: #192733;
+    background-color: var(--darkbrown);
     border-radius: 10px;
-    padding: 10px 15px 10px 15px;
+    /* padding: 10px 15px 10px 15px; */
+    padding: 5px;
 }
 
-.tooltip-text::before {
-    content: "";
+/* .tooltip-text::before {
+    content: "?";
     position: absolute;
     transform: rotate(45deg);
     background-color: #192733;
     padding: 5px;
     z-index: 10;
-}
+} */
 
 .hover-text:hover .tooltip-text {
     visibility: visible;
