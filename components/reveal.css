@@ -893,6 +893,10 @@ div.mermaid .flowchart-label foreignObject {
     background-color: var(--brown);
 }
 
+.reveal .darkbrown-bg {
+    background-color: var(--darkbrown);
+}
+
 .reveal .cyan-bg {
     background-color: var(--cyan);
 }
