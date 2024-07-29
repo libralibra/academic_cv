@@ -879,10 +879,14 @@ div.mermaid .flowchart-label foreignObject {
 .centre-box2,
 .center-box2 {
     /* border: 5px solid; */
+    border-width: 5px;
+    border-style: solid;
+    border-color: var(--golden);
     position: absolute !important;
     top: 53%;
     left: 50%;
-    padding: 10px;
+    /* padding will make border radium stop working */
+    /* padding: 10px; */
     /* make sure to adjust the padding to fit your content */
     transform: translate(-50%, -50%);
 }
