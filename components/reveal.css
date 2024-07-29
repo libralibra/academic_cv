@@ -234,8 +234,14 @@ darkpurple {
     /* text-shadow: 1px 1px 0 #000000, 1px -1px 0 rgba(0, 0, 0, 0.3), -1px -1px 0 rgba(0, 0, 0, 0.3), -1px 1px 0 rgba(0, 0, 0, 0.3); */
 }
 
+.flash,
 .rainbow,
-rainbow {
+.flash1,
+.rainbow1,
+.flash2,
+.rainbow2,
+.flash3,
+.rainbow3 {
     background-image: linear-gradient(to left, violet, rgb(158, 78, 216), rgb(168, 168, 249), rgb(14, 177, 14), yellow, orange, rgb(229, 82, 82));
     color: transparent;
     background-clip: text;
@@ -243,14 +249,58 @@ rainbow {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     /* animation: shine 3s linear infinite; */
-    animation: shine 3s cubic-bezier(0.65, 0.05, 0.36, 1) infinite;
     background-size: 200% auto;
 }
 
+.flash,
+.rainbow,
+.flash1,
+.rainbow1 {
+    animation: shine1 3s cubic-bezier(0.65, 0.05, 0.36, 1) infinite;
+}
+
+.flash2,
+.rainbow2 {
+    animation: shine2 3s linear infinite;
+}
+
+.flash3,
+.rainbow3 {
+    animation: shine3 3s cubic-bezier(0.175, 0.885, 0.32, 1.275) infinite;
+}
+
 /* for rainbow effect animation */
-@keyframes shine {
+@keyframes shine1 {
     0% {
         background-position: 200% center;
+    }
+
+    100% {
+        background-position: -200% center;
+    }
+}
+
+@keyframes shine2 {
+    0% {
+        background-position: 200% center;
+    }
+
+    50% {
+        background-position: 0% center;
+    }
+
+    100% {
+        background-position: -200% center;
+    }
+}
+
+@keyframes shine3 {
+    0% {
+        background-position: 200% center;
+    }
+
+    50% {
+        background-position: 0% center;
     }
 
     100% {
@@ -801,6 +851,14 @@ div.mermaid .flowchart-label foreignObject {
     padding: 5px !important;
 }
 
+.padding-5 {
+    padding: 5px !important;
+}
+
+.padding-10 {
+    padding: 10px !important;
+}
+
 .box-centre,
 .box-center,
 .centre-box,
@@ -885,78 +943,97 @@ div.mermaid .flowchart-label foreignObject {
 .reveal .gray-bg,
 .reveal .grey-bg {
     background-color: var(--gray);
+    color: var(--black);
 }
 
 .reveal .dark-bg {
     background-color: #333;
+    color: var(--white);
 }
 
 .reveal .silver-bg {
     background-color: var(--silver);
+    color: var(--black);
 }
 
 .reveal .red-bg {
     background-color: var(--red);
+    color: var(--black);
 }
 
 .reveal .blue-bg {
     background-color: var(--blue);
+    color: var(--black);
 }
 
 .reveal .green-bg {
     background-color: var(--green);
+    color: var(--black);
 }
 
 .reveal .yellow-bg {
     background-color: var(--yellow);
+    color: var(--black);
 }
 
 .reveal .orange-bg {
     background-color: var(--orange);
+    color: var(--black);
 }
 
 .reveal .darkorange-bg {
     background-color: var(--darkorange);
+    color: var(--black);
 }
 
 .reveal .skyblue-bg {
     background-color: var(--skyblue);
+    color: var(--black);
 }
 
 .reveal .pink-bg {
     background-color: var(--pink);
+    color: var(--black);
 }
 
 .reveal .purple-bg {
     background-color: var(--purple);
+    color: var(--black);
 }
 
 .reveal .brown-bg {
     background-color: var(--brown);
+    color: var(--black);
 }
 
 .reveal .darkbrown-bg {
     background-color: var(--darkbrown);
+    color: var(--white);
 }
 
 .reveal .cyan-bg {
     background-color: var(--cyan);
+    color: var(--black);
 }
 
 .reveal .golden-bg {
     background-color: var(--golden);
+    color: var(--black);
 }
 
 .reveal .lime-bg {
     background-color: var(--lime);
+    color: var(--black);
 }
 
 .reveal .white-bg {
     background-color: var(--white);
+    color: var(--black);
 }
 
 .reveal .black-bg {
     background-color: var(--black);
+    color: var(--white);
 }
 
 .reveal .no-bg {
@@ -3720,8 +3797,8 @@ html.print-pdf .pdf_div {
     z-index: 2;
 }
 
-/* add tooltip */
-.tooltip {
+/* add tooltip, .tooltip has been used by verticator.css */
+.tooltips {
     position: fixed;
     z-index: 999;
     font-size: 30px;
@@ -3739,7 +3816,7 @@ html.print-pdf .pdf_div {
     opacity: 0;
 }
 
-.tooltip-arrow {
+.tooltips-arrow {
     position: absolute;
     top: -4px;
     width: 7px;
