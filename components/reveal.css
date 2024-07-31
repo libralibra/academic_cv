@@ -1102,7 +1102,18 @@ italic {
 bold {
     font-size: 110% !important;
     font-weight: bold !important;
-    text-shadow: 2px 2px 1px rgb(255, 255, 255) !important;
+    /* text-shadow: 1px 1px 2px rgb(255, 255, 255) !important; */
+    text-shadow: 2px 2px 3px #000000 !important;
+}
+
+.white-shadow,
+.light-shadow {
+    text-shadow: 2px 2px 3px #ffffff !important;
+}
+
+.dark-shadow,
+.black-shadow {
+    text-shadow: 2px 2px 3px #000000 !important;
 }
 
 .bigtext,
@@ -1298,40 +1309,80 @@ table thead {
     filter: invert(100%) !important;
 }
 
+.opacity-5 {
+    filter: opacity(5%) !important;
+}
+
 .opacity-10 {
     filter: opacity(10%) !important;
+}
+
+.opacity-15 {
+    filter: opacity(15%) !important;
 }
 
 .opacity-20 {
     filter: opacity(20%) !important;
 }
 
+.opacity-25 {
+    filter: opacity(25%) !important;
+}
+
 .opacity-30 {
     filter: opacity(30%) !important;
+}
+
+.opacity-35 {
+    filter: opacity(35%) !important;
 }
 
 .opacity-40 {
     filter: opacity(40%) !important;
 }
 
+.opacity-45 {
+    filter: opacity(45%) !important;
+}
+
 .opacity-50 {
     filter: opacity(50%) !important;
+}
+
+.opacity-55 {
+    filter: opacity(55%) !important;
 }
 
 .opacity-60 {
     filter: opacity(60%) !important;
 }
 
+.opacity-65 {
+    filter: opacity(65%) !important;
+}
+
 .opacity-70 {
     filter: opacity(70%) !important;
+}
+
+.opacity-75 {
+    filter: opacity(75%) !important;
 }
 
 .opacity-80 {
     filter: opacity(80%) !important;
 }
 
+.opacity-85 {
+    filter: opacity(85%) !important;
+}
+
 .opacity-90 {
     filter: opacity(90%) !important;
+}
+
+.opacity-95 {
+    filter: opacity(95%) !important;
 }
 
 .img-zoom,
