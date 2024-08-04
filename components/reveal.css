@@ -955,6 +955,7 @@ div.mermaid .flowchart-label foreignObject {
     color: var(--white);
 }
 
+.reveal .light-bg,
 .reveal .silver-bg {
     background-color: var(--silver);
     color: var(--black);
@@ -1101,14 +1102,16 @@ italic {
 .bold,
 bold {
     font-size: 110% !important;
-    font-weight: bold !important;
-    /* text-shadow: 1px 1px 2px rgb(255, 255, 255) !important; */
-    text-shadow: 2px 2px 3px #000000 !important;
+    /* font-weight: bold !important; */
+    /* text-shadow: 2px 2px 3px #000000 !important; */
+    font-weight: bolder !important;
+    text-shadow: #333 0 0 3px !important;
 }
 
 .white-shadow,
 .light-shadow {
-    text-shadow: 2px 2px 3px #ffffff !important;
+    /* text-shadow: 2px 2px 3px #ffffff !important; */
+    text-shadow: #ffffff 0 0 3px !important;
 }
 
 .dark-shadow,
