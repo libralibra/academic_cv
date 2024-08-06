@@ -754,7 +754,7 @@ div.mermaid .flowchart-label foreignObject {
     text-indent: -40px;
 }
 
-.like-li-2,
+/* .like-li-2,
 .like-li-3 {
     padding-left: 1em;
     text-indent: -1em;
@@ -764,7 +764,7 @@ div.mermaid .flowchart-label foreignObject {
 .like-li-3::first-line {
     padding-left: -40px;
     text-indent: 0px;
-}
+} */
 
 /* left, right align */
 .text-left,
