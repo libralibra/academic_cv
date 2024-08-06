@@ -754,27 +754,23 @@ div.mermaid .flowchart-label foreignObject {
     text-indent: -40px;
 }
 
+.like-li-2,
+.like-li-3 {
+    padding-left: 1em;
+    text-indent: -1em;
+}
+
+.like-li-2::first-line,
+.like-li-3::first-line {
+    padding-left: -40px;
+    text-indent: 0px;
+}
+
 /* left, right align */
 .text-left,
 .left-text,
 .like-li {
     text-align: left !important;
-}
-
-.like-li-2 {
-    text-align: left !important;
-    /* padding-left: 40px; */
-    /* text-indent: -35px; */
-    padding-left: 1em;
-    text-indent: -1em;
-}
-
-.like-li-3 {
-    text-align: left !important;
-    /* padding-left: 40px; */
-    /* text-indent: -30px; */
-    padding-left: 1em;
-    text-indent: -1em;
 }
 
 .text-right,
@@ -3421,6 +3417,11 @@ table thead {
 .img-height-250 {
     max-height: 250px !important;
     height: 250px !important;
+}
+
+.img-height-280 {
+    max-height: 280px !important;
+    height: 280px !important;
 }
 
 .img-height-300 {
