@@ -1,5 +1,6 @@
 // write the publication list to both versions of cv 
 // Daniel Zhang, June 2024
+console.log('loading pub_list.js');
 
 // only works for the webpages that contains publication sections
 if (window.location.href.indexOf("index.html") > -1 ||

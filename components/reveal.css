@@ -3856,7 +3856,19 @@ html.print-pdf .pdf_div {
     z-index: 2;
 }
 
-/* add tooltip, .tooltip has been used by verticator.css */
+/* invisible text in index.html for testing */
+.invisible {
+    color: var(--r-background-color);
+    text-decoration: none;
+    text-shadow: none;
+}
+
+.hidden-item {
+    display: none;
+}
+
+/* add tooltips class, .tooltip has been used by verticator.css */
+/* use data-tip in html, last-touch.js will process them */
 .tooltips {
     position: fixed;
     z-index: 999;

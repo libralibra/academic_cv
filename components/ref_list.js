@@ -1,5 +1,6 @@
 // write the reference list to both versions of cv 
 // Daniel Zhang, June 2024
+console.log('loading ref_list.js');
 
 document.write(`<article>
             <h3 class="caption">Reference</h3>
