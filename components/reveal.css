@@ -791,6 +791,14 @@ div.mermaid .flowchart-label foreignObject {
     margin: 3px !important;
 }
 
+.padding-5 {
+    padding: 5px !important;
+}
+
+.padding-10 {
+    padding: 10px !important;
+}
+
 .box-float {
     position: absolute !important;
 }
@@ -847,13 +855,6 @@ div.mermaid .flowchart-label foreignObject {
     padding: 5px !important;
 }
 
-.padding-5 {
-    padding: 5px !important;
-}
-
-.padding-10 {
-    padding: 10px !important;
-}
 
 .box-centre,
 .box-center,
@@ -1392,6 +1393,7 @@ table thead {
 .img-zoom-25,
 .img-zoom-3 {
     transition: transform .2s;
+    transform-origin: center;
 }
 
 /* too big will go outside the viewport */
@@ -3319,6 +3321,10 @@ table thead {
     border-radius: 100px !important;
 }
 
+.img-square {
+    aspect-ratio: 1/1 !important;
+}
+
 .img-square-50 {
     height: 50px !important;
     width: 50px !important;
@@ -3397,6 +3403,11 @@ table thead {
 .img-height-50 {
     max-height: 50px !important;
     height: 50px !important;
+}
+
+.img-height-80 {
+    max-height: 80px !important;
+    height: 80px !important;
 }
 
 .img-height-100 {
@@ -3596,7 +3607,6 @@ table thead {
     width: 25% !important;
 }
 
-
 .img-width-30p {
     max-width: 30% !important;
     width: 30% !important;
@@ -3677,9 +3687,24 @@ table thead {
     width: 1px !important;
 }
 
+.img-width-3 {
+    max-width: 3px !important;
+    width: 3px !important;
+}
+
+.img-width-5 {
+    max-width: 5px !important;
+    width: 5px !important;
+}
+
 .img-width-10 {
     max-width: 10px !important;
     width: 10px !important;
+}
+
+.img-width-15 {
+    max-width: 15px !important;
+    width: 15px !important;
 }
 
 .img-width-20 {
@@ -3695,6 +3720,11 @@ table thead {
 .img-width-50 {
     max-width: 50px !important;
     width: 50px !important;
+}
+
+.img-width-80 {
+    max-width: 80px !important;
+    width: 80px !important;
 }
 
 .img-width-100 {
@@ -3872,7 +3902,8 @@ html.print-pdf .pdf_div {
 .tooltips {
     position: fixed;
     z-index: 999;
-    font-size: 30px;
+    /* font-size: 30px; */
+    font-size: 1.3em;
     /* line-height: 12px; */
     padding: 5px;
     background: var(--cyan);
