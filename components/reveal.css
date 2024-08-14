@@ -4020,9 +4020,9 @@ a.roll span:after {
     -moz-transform-origin: 50% 0%;
     transform-origin: 50% 0%;
 
-    -webkit-transform: translate3d(0px, 105%, 0px) rotateX(-90deg);
-    -moz-transform: translate3d(0px, 105%, 0px) rotateX(-90deg);
-    transform: translate3d(0px, 105%, 0px) rotateX(-90deg);
+    -webkit-transform: translate3d(0px, 102%, 0px) rotateX(-90deg);
+    -moz-transform: translate3d(0px, 102%, 0px) rotateX(-90deg);
+    transform: translate3d(0px, 102%, 0px) rotateX(-90deg);
 }
 
 /* don't change pdf download link color, no underline */
