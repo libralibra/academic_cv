@@ -150,6 +150,14 @@ footer {
     text-decoration-skip-ink: none;
 }
 
+.under-wavy {
+    text-decoration: underline wavy 2px;
+    /* add extra gap between the line and the text */
+    text-underline-offset: 5px;
+    /* do not break the line */
+    text-decoration-skip-ink: none;
+}
+
 /* main content includes left and right columns */
 main,
 .main {

@@ -393,12 +393,14 @@ div.mermaid .flowchart-label foreignObject {
 /* custom fragment delete (strike has been used) */
 .reveal .fragment.delete {
     text-decoration-line: underline;
+    text-decoration-skip-ink: none;
 }
 
 .reveal .fragment.delete.visible {
     text-decoration-line: line-through;
     text-decoration-color: var(--red);
     text-decoration-thickness: 20%;
+    text-decoration-skip-ink: none;
 }
 
 /* custom fragment delete */
@@ -1190,23 +1192,34 @@ tinytext {
 .underline,
 underline {
     text-decoration-line: underline !important;
+    text-decoration-skip-ink: none;
 }
 
 .overline,
 overline {
     text-decoration-line: overline !important;
+    text-decoration-skip-ink: none;
+}
+
+.overunderline,
+overunderline {
+    text-decoration: overline underline !important;
+    text-decoration-skip-ink: none;
 }
 
 .wavyline,
 wavyline {
-    text-decoration-line: underline;
-    text-decoration-style: wavy;
+    text-decoration: underline wavy !important;
+    text-decoration-skip-ink: none;
+    /* text-decoration-line: underline;
+    text-decoration-style: wavy; */
 }
 
 .strike,
 strike {
     color: red !important;
     text-decoration-line: line-through !important;
+    text-decoration-skip-ink: none;
 }
 
 
@@ -3873,7 +3886,7 @@ html.print-pdf .pdf_div {
 .pdf_div .pdf_link {
     background-color: var(--r-background-color);
     text-align: center;
-    text-shadow: #333333;
+    /* text-shadow: #333333; */
     position: absolute;
     /* will affect the corner bar display */
     width: 80%;
@@ -4336,6 +4349,7 @@ html.reveal-full-page {
 
 .reveal .fragment.strike.visible {
     text-decoration: line-through;
+    text-decoration-skip-ink: none;
 }
 
 .reveal .fragment.fade-up {
@@ -6364,6 +6378,7 @@ html.print-pdf .aria-status {
         color: #000 !important;
         font-weight: 700 !important;
         text-decoration: underline !important;
+        text-decoration-skip-ink: none;
     }
 
     html:not(.print-pdf) .reveal div,
