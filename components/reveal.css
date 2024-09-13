@@ -3865,6 +3865,11 @@ table thead {
     width: 1300px !important;
 }
 
+/* tikzjax background */
+svg:not(.tl-svg-context) {
+    background-color: var(--white);
+}
+
 /* pdf download corner, position only, the colour is different for 
     each theme */
 .pdf_div {
