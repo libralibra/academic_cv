@@ -3866,7 +3866,10 @@ table thead {
 }
 
 /* tikzjax background */
-svg:not(.tl-svg-context) {
+/* svg:not(.tl-svg-context) {
+    background-color: var(--white);
+} */
+div.page svg {
     background-color: var(--white);
 }
 
