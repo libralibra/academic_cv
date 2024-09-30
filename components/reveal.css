@@ -890,6 +890,11 @@ div.mermaid .flowchart-label foreignObject {
     transform: translate(-50%, -50%);
 }
 
+.no-border,
+.box-no-border {
+    border: none !important;
+}
+
 .box-bottom-right,
 .box-right-bottom {
     position: absolute !important;
@@ -1297,7 +1302,7 @@ html.print-pdf .pdf_div {
     height: 50px;
     line-height: 50px;
     font-size: 1.75em;
-    top: 4px;
+    top: 5px;
     left: 38%;
     transform: rotate(45deg);
     z-index: 2;
