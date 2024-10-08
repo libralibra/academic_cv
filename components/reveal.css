@@ -606,7 +606,8 @@ div.mermaid .flowchart-label foreignObject {
 /* custom fragment red text */
 
 /* custom fragment red box */
-.reveal .fragment.red-box {
+.reveal .fragment.red-box,
+.reveal .fragment.red-box-big {
     border: none;
 }
 
@@ -614,6 +615,13 @@ div.mermaid .flowchart-label foreignObject {
     border: 3px solid var(--red);
     padding-left: 10px;
     padding-right: 10px;
+}
+
+.reveal .fragment.red-box-big.visible {
+    border: 3px solid var(--red);
+    padding: 15px 10px 15px 10px;
+    /* padding-left: 10px;
+    padding-right: 10px; */
 }
 
 .reveal .fragment.blue-box {
