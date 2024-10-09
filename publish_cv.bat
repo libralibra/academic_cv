@@ -21,9 +21,10 @@ REM copy html and folders
 ROBOCOPY "%srccv%" "%dst%" /e /z /pf /eta /nfl /ndl /nc /ns /njh /xd ".github" ".git" "*.doc" "*.docx" "*.pdf"
 
 REM copy css and js to components folder 
-
 XCOPY /Y /F /Q "%srccss%\cv.css" "%dstcss%\cv.css" 
+XCOPY /Y /F /Q "%srccss%\margin_controls.css" "%dstcss%\margin_controls.css"
 XCOPY /Y /F /Q "%srccss%\reveal.css" "%dstcss%\reveal.css"
+
 REM XCOPY /Y /F /Q "%srcjs%\cv.js" "%dstcss%\cv.js" 
 XCOPY /Y /F /Q "%srcjs%\pub_list.js" "%dstcss%\pub_list.js"
 XCOPY /Y /F /Q "%srcjs%\ref_list.js" "%dstcss%\ref_list.js"
