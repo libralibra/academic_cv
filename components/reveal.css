@@ -620,11 +620,10 @@ div.mermaid .flowchart-label foreignObject {
 .reveal .fragment.red-box-big.visible {
     border: 3px solid var(--red);
     padding: 15px 10px 15px 10px;
-    /* padding-left: 10px;
-    padding-right: 10px; */
 }
 
-.reveal .fragment.blue-box {
+.reveal .fragment.blue-box,
+.reveal .fragment.blue-box-big {
     border: none;
 }
 
@@ -634,7 +633,13 @@ div.mermaid .flowchart-label foreignObject {
     padding-right: 10px;
 }
 
-.reveal .fragment.green-box {
+.reveal .fragment.blue-box-big.visible {
+    border: 3px solid var(--blue);
+    padding: 15px 10px 15px 10px;
+}
+
+.reveal .fragment.green-box,
+.reveal .fragment.green-box-big {
     border: none;
 }
 
@@ -644,7 +649,13 @@ div.mermaid .flowchart-label foreignObject {
     padding-right: 10px;
 }
 
-.reveal .fragment.yellow-box {
+.reveal .fragment.green-box-big.visible {
+    border: 3px solid var(--green);
+    padding: 15px 10px 15px 10px;
+}
+
+.reveal .fragment.yellow-box,
+.reveal .fragment.yellow-box-big {
     border: none;
 }
 
@@ -654,7 +665,13 @@ div.mermaid .flowchart-label foreignObject {
     padding-right: 10px;
 }
 
-.reveal .fragment.purple-box {
+.reveal .fragment.yellow-box.visible {
+    border: 3px solid var(--yellow);
+    padding: 15px 10px 15px 10px;
+}
+
+.reveal .fragment.purple-box,
+.reveal .fragment.purple-box-big {
     border: none;
 }
 
@@ -664,7 +681,13 @@ div.mermaid .flowchart-label foreignObject {
     padding-right: 10px;
 }
 
-.reveal .fragment.cyan-box {
+.reveal .fragment.purple-box-big.visible {
+    border: 3px solid var(--purple);
+    padding: 15px 10px 15px 10px;
+}
+
+.reveal .fragment.cyan-box,
+.reveal .fragment.cyan-box-big {
     border: none;
 }
 
@@ -674,7 +697,13 @@ div.mermaid .flowchart-label foreignObject {
     padding-right: 10px;
 }
 
-.reveal .fragment.pink-box {
+.reveal .fragment.cyan-box-big.visible {
+    border: 3px solid var(--cyan);
+    padding: 15px 10px 15px 10px;
+}
+
+.reveal .fragment.pink-box,
+.reveal .fragment.pink-box-big {
     border: none;
 }
 
@@ -684,7 +713,13 @@ div.mermaid .flowchart-label foreignObject {
     padding-right: 10px;
 }
 
-.reveal .fragment.brown-box {
+.reveal .fragment.pink-box-big.visible {
+    border: 3px solid var(--pink);
+    padding: 15px 10px 15px 10px;
+}
+
+.reveal .fragment.brown-box,
+.reveal .fragment.brown-box-big {
     border: none;
 }
 
@@ -694,8 +729,15 @@ div.mermaid .flowchart-label foreignObject {
     padding-right: 10px;
 }
 
+.reveal .fragment.brown-box-big.visible {
+    border: 3px solid var(--brown);
+    padding: 15px 10px 15px 10px;
+}
+
 .reveal .fragment.golden-box,
-.reveal .fragment.orange-box {
+.reveal .fragment.golden-box-big,
+.reveal .fragment.orange-box,
+.reveal .fragment.orange-box-big {
     border: none;
 }
 
@@ -704,6 +746,12 @@ div.mermaid .flowchart-label foreignObject {
     border: 3px solid var(--orange);
     padding-left: 10px;
     padding-right: 10px;
+}
+
+.reveal .fragment.golden-box-big.visible,
+.reveal .fragment.orange-box-big.visible {
+    border: 3px solid var(--orange);
+    padding: 15px 10px 15px 10px;
 }
 
 /* custom fragment red box */

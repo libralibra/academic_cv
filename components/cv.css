@@ -1,3 +1,6 @@
+/* import img format definitions */
+@import url(margin_controls.css);
+
 @font-face {
     font-family: GlacialIndifference;
     src: url(../theme/fonts/glacial-indifference/GlacialIndifference-Regular.otf);
