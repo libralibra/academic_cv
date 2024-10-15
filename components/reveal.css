@@ -947,6 +947,7 @@ div.mermaid .flowchart-label foreignObject {
 }
 
 .no-border,
+.border-none,
 .box-no-border {
     border: none !important;
 }
