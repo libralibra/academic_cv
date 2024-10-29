@@ -10,10 +10,10 @@ links = {'<link rel="stylesheet" href="../../assets/dist/css/reveal.css">': '<li
          '<script id="pub_list" src="../../assets/dist/js/pub_list.js"></script>': '<script id="pub_list" src="./components/pub_list.js"></script>',
          '<script id="ref_list" src="../../assets/dist/js/ref_list.js"></script>': '<script id="ref_list" src="./components/ref_list.js"></script>',
          '<script src="../../assets/dist/js/cv.js"></script>': '<script src="./components/cv.js"></script>',
-         '<button id="phone_btn_me"': '<!-- <button id="phone_btn_me"',
-         'Reveal Number</button>': 'Reveal Number</button> -->',
-         '<button id="email_btn_me"': '<!-- <button id="email_btn_me"',
-         'Reveal Email</button>': 'Reveal Email</button> -->'
+        #  '<button id="phone_btn_me"': '<!-- <button id="phone_btn_me"',
+        #  'Reveal Number</button>': 'Reveal Number</button> -->',
+        #  '<button id="email_btn_me"': '<!-- <button id="email_btn_me"',
+        #  'Reveal Email</button>': 'Reveal Email</button> -->'
          }
 
 
