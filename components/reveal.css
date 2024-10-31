@@ -1331,10 +1331,15 @@ div.page svg {
     background-color: var(--white);
 }
 
+/* don't show in print-pdf and overview */
+html.print-pdf .pdf_div {
+    display: none !important;
+}
+
 /* pdf download corner, position only, the colour is different for 
     each theme */
 .pdf_div {
-    background-color: var(--r-background-color);
+    /* background-color: var(--r-background-color); */
     /* hide the overflow part */
     width: 170px;
     height: 170px;
@@ -1342,15 +1347,12 @@ div.page svg {
     position: absolute;
     top: -6px;
     right: 0;
-}
-
-/* don't show in print-pdf and overview */
-html.print-pdf .pdf_div {
-    display: none !important;
+    background-color: transparent;
 }
 
 .pdf_div .pdf_link {
-    background-color: var(--r-background-color);
+    /* background-color: var(--r-background-color); */
+    background-color: transparent;
     text-align: center;
     /* text-shadow: #333333; */
     position: absolute;
