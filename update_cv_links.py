@@ -14,8 +14,10 @@ links = {'<link rel="stylesheet" href="../../assets/dist/css/reveal.css">': '<li
         #  'Reveal Number</button>': 'Reveal Number</button> -->',
         #  '<button id="email_btn_me"': '<!-- <button id="email_btn_me"',
         #  'Reveal Email</button>': 'Reveal Email</button> -->'
-        '''<button id="email_btn_me" onclick="revealInfo('email_btn_me','email_me')">Reveal Email</button>''': '',
-        '''<button id="phone_btn_me" onclick="revealInfo('phone_btn_me','phone_me')">Reveal Number</button>''': ''
+        '<button id="email_btn_me" onclick="revealInfo(': '<!--button id="email_btn_me" onclick="revealInfo(',
+        'id="email_me" class="hidden-item"></span>': 'id="email_me" class="hidden-item"></span-->',
+        '<button id="phone_btn_me" onclick="revealInfo(': '<!--button id="phone_btn_me" onclick="revealInfo(',
+        'id="phone_me" class="hidden-item darkblue"></span>': 'id="phone_me" class="hidden-item darkblue"></span-->'
          }
 
 
