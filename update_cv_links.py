@@ -22,7 +22,8 @@ links = {'<link rel="stylesheet" href="../../assets/dist/css/reveal.css">': '<li
 def update_html(fname, old_str, new_str):
     with open(fname, 'r') as f:
         content = f.read()
-    if new_str not in content:
+    if old_str in content and new_str not in content:
+        print(f'.. replacing [{old_str}]')
         content = content.replace(old_str, new_str)
     with open(fname, 'w') as f:
         f.write(content)
@@ -31,6 +32,7 @@ def update_html(fname, old_str, new_str):
 def update_cv_links(cv_dir):
     for file in os.listdir(cv_dir):
         if file.endswith('.html'):
+            print(f'processing: {file}')
             for old_str, new_str in links.items():
                 update_html(file, old_str, new_str)
 
