@@ -16,6 +16,8 @@ if (window.location.href.indexOf("index.html") > -1 ||
 
                 <span class="bold-a">Journal & Conference</span>
                 <ol>
+                    <li>Gerico Vidanes, David Toal, Xu Zhang, Andy Keane. (2025) "An Empirical Review of Uncertainty Estimation for Quality Control in CAD Model Segmentation". EANN/EAAAI, Cyprus.</li>
+
                     <li>Gerico Vidanes, David Toal, Xu Zhang, Andy Keane. (2024) "Point-based Graph Neural Networks for Semantic Feature Recognition in Computer-aided Design/Engineering". Journal of Computer-Aided Design, 166 (C), doi: 10.1016/j.cad.2023.103629 <!--a href="https://www.sciencedirect.com/science/article/pii/S0010448523001616" target="_blank">&gt;&gt;LINK</a--> <!--a href="https://dl.acm.org/doi/10.1016/j.cad.2023.103629">&gt;&gt;LINK</a--></li>
 
                     <li>Thomas Weichlein, Shujun Zhang, Pengzhi Li, Xu Zhang. (2023) "Data Flow Control for Network Load Balancing in IEEE Time-Sensitive Networks for Automation", IEEE Access 11(1), doi: 10.1109/ACCESS.2023.3243286 <!--a href="https://ieeexplore.ieee.org/document/10040635">&gt;&gt;LINK</a--></li>
