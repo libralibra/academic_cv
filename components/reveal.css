@@ -1356,13 +1356,13 @@ html.print-pdf .pdf_div {
     text-align: center;
     /* text-shadow: #333333; */
     position: absolute;
-    /* will affect the corner bar display */
+    /* will affect the corner bar display position */
     /* box of the pdf text */
-    width: 85%;
-    /* height between the 2 diagonal lines */
-    height: 40px;
+    width: 80%;
+    /* height between the 2 diagonal lines - the lower line */
+    height: 38px;
     line-height: 40px;
-    font-size: 1.75em;
+    font-size: 1.5em;
     top: 5px;
     left: 38%;
     transform: rotate(45deg);
