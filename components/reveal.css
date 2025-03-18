@@ -857,6 +857,7 @@ div.mermaid .flowchart-label foreignObject {
     padding: 10px !important;
 }
 
+.img-float,
 .box-float {
     position: absolute !important;
 }
