@@ -7,7 +7,7 @@ ECHO =========================================
 REM copy the cv related files from personal git repo
 REM copy css/js/logo/doc/imgs and then update the links
 
-SET "src=D:\GitHubWork\UK_Teaching"
+SET "src=D:\GitHub\UK_Teaching"
 SET "srccss=%src%\assets\dist\css"
 SET "srcjs=%src%\assets\dist\js"
 SET "srccv=%src%\Uni\CV"
