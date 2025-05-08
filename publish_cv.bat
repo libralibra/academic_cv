@@ -11,6 +11,7 @@ SET "src=D:\GitHub\UK_Teaching"
 SET "srccss=%src%\assets\dist\css"
 SET "srcjs=%src%\assets\dist\js"
 SET "srccv=%src%\Uni\CV"
+SET "srccvdocs=%src%\Uni\CV\docs"
 SET "dst=D:\GitHub\academic_cv"
 SET "dstcss=%dst%\components"
 
@@ -18,7 +19,7 @@ REM check help file for all options, /n* excludes certain log information
 
 REM copy html and folders
 
-ROBOCOPY "%srccv%" "%dst%" /e /z /pf /eta /nfl /ndl /nc /ns /njh /xd ".github" ".git" "*.doc" "*.docx" "*.pdf"
+ROBOCOPY "%srccv%" "%dst%" /e /z /pf /eta /nfl /ndl /nc /ns /njh /xd "%srccvdocs%" ".github" ".git" "*.doc" "*.docx" "*.pdf"
 
 REM copy css and js to components folder 
 XCOPY /Y /F /Q "%srccss%\cv.css" "%dstcss%\cv.css" 
