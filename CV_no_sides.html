@@ -9,8 +9,8 @@
     <link rel="icon" type="image/x-icon" href="logo/favicon.ico">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="./components/reveal.css">
-    <link rel="stylesheet" href="./components/cv.css">
+    <link rel="stylesheet" href="../../assets/dist/css/reveal.css">
+    <link rel="stylesheet" href="../../assets/dist/css/cv.css">
 
     <script src="../../assets/dist/js/jquery_3.7.1.js"></script>
     <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script> -->
@@ -34,10 +34,10 @@
         <span class="smalltext">》View the <a href="index.html" class="red bold-a">interactive version</a>! 》View <a
                 href="Teaching.html" class="bold-a red">teaching</a> & <a href="Activities.html"
                 class="bold-a red">other</a> activities</span> (v. <span id="version"></span>)<br>
-        <!--button id="email_btn_me" onclick="revealInfo('email_btn_me','email_me')">Reveal Email</button> <span
-            class="hidden-item" id="email_me"></span-->
-        <!--button id="phone_btn_me" onclick="revealInfo('phone_btn_me','phone_me')">Reveal Number</button> <span
-            class="hidden-item darkblue" id="phone_me"></span-->
+        <button id="email_btn_me" onclick="revealInfo('email_btn_me','email_me')">Reveal Email</button> <span
+            class="hidden-item" id="email_me"></span>
+        <button id="phone_btn_me" onclick="revealInfo('phone_btn_me','phone_me')">Reveal Number</button> <span
+            class="hidden-item darkblue" id="phone_me"></span>
     </header>
 
     <button onclick="topFunction()" id="myBtn" title="Go to top">⤒ Top</button>
@@ -238,15 +238,15 @@
         </article>
 
         <!-- Publication List -->
-        <script id="pub_list" src="./components/pub_list.js"></script>
+        <script id="pub_list" src="../../assets/dist/js/pub_list.js"></script>
 
 
         <!-- Reference -->
-        <!-- <script id="ref_list" src="./components/ref_list.js"></script> -->
+        <!-- <script id="ref_list" src="../../assets/dist/js/ref_list.js"></script> -->
     </footer>
 </body>
 
-<script src="./components/cv.js"></script>
+<script src="../../assets/dist/js/cv.js"></script>
 
 <!-- update version string automatically, last modified year+month -->
 <script>
