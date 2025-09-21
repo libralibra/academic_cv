@@ -25,6 +25,7 @@ REM copy css and js to components folder
 XCOPY /Y /F /Q "%srccss%\cv.css" "%dstcss%\cv.css" 
 XCOPY /Y /F /Q "%srccss%\margin_controls.css" "%dstcss%\margin_controls.css"
 XCOPY /Y /F /Q "%srccss%\reveal.css" "%dstcss%\reveal.css"
+XCOPY /Y /F /Q "%srccss%\teaching_ext.css" "%dstcss%\teaching_ext.css"
 
 REM XCOPY /Y /F /Q "%srcjs%\cv.js" "%dstcss%\cv.js" 
 XCOPY /Y /F /Q "%srcjs%\pub_list.js" "%dstcss%\pub_list.js"
