@@ -6,6 +6,7 @@
 import os
 
 links = {'<link rel="stylesheet" href="../../assets/dist/css/reveal.css">': '<link rel="stylesheet" href="./components/reveal.css">',
+         '<link rel="stylesheet" href="../../assets/dist/css/teaching_ext.css">': '<link rel="stylesheet" href="./components/teaching_ext.css">'
          '<link rel="stylesheet" href="../../assets/dist/css/cv.css">': '<link rel="stylesheet" href="./components/cv.css">',
          '<script id="pub_list" src="../../assets/dist/js/pub_list.js"></script>': '<script id="pub_list" src="./components/pub_list.js"></script>',
          '<script id="ref_list" src="../../assets/dist/js/ref_list.js"></script>': '<script id="ref_list" src="./components/ref_list.js"></script>',
