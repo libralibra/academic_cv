@@ -28,7 +28,7 @@ def update_html(fname, old_str, new_str):
     if old_str in content and new_str not in content:
         print(f'.. replacing [{old_str}]')
         content = content.replace(old_str, new_str)
-    with open(fname, 'w') as f:
+    with open(fname, 'w', encoding='utf-8') as f:
         f.write(content)
 
 
