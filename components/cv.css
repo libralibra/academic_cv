@@ -115,6 +115,13 @@ chapter {
     margin-bottom: 20px;
 }
 
+/* float right */
+.right-align-inline {
+    float: right;
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+
 /* blocks in the main content */
 article {
     color: black;
