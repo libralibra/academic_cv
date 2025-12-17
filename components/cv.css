@@ -161,6 +161,11 @@ footer {
     text-decoration-skip-ink: none;
 }
 
+.right-align-inline {
+    float: right;
+    display: inline-block;
+}
+
 /* main content includes left and right columns */
 main,
 .main {
