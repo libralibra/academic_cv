@@ -263,3 +263,22 @@ table {
 #myBtn:hover {
     background-color: #555;
 }
+
+@media print {
+    .hidden {
+        display: none !important;
+    }
+
+    /* force all elements to black and white */
+    * {
+        color: black !important;
+        background: transparent !important;
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    .italic-a, .bold-a {
+        color: black !important;
+        text-shadow: none !important;
+    }
+}
