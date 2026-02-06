@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en-GB" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dr Daniel Zhang | Academic Profile</title>
+
+    <!-- Google Fonts: Inter for body text, EB Garamond for academic-style headings -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=EB+Garamond:wght@600;800&family=Roboto+Mono&display=swap"
+        rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="components/work_style.css">
+    <!-- Dependencies -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+
+    <!-- Floating Action Button Toolbar -->
+    <div class="fab-toolbar">
+        <button class="icon-btn" id="theme-switcher" data-tooltip="Switch to Light Theme">
+            <span class="theme-icon-light">
+                <svg id="theme-icon-sun" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="5"></circle>
+                    <line x1="12" y1="1" x2="12" y2="3"></line>
+                    <line x1="12" y1="21" x2="12" y2="23"></line>
+                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                    <line x1="1" y1="12" x2="3" y2="12"></line>
+                    <line x1="21" y1="12" x2="23" y2="12"></line>
+                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                </svg>
+            </span>
+            <span class="theme-icon-dark">
+                <svg id="theme-icon-moon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                </svg></span>
+        </button>
+        <button class="icon-btn" id="export-pdf" data-tooltip="Export PDF File">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                <polyline points="14 2 14 8 20 8"></polyline>
+                <line x1="16" y1="13" x2="8" y2="13"></line>
+                <line x1="16" y1="17" x2="8" y2="17"></line>
+                <polyline points="10 9 9 9 8 9"></polyline>
+            </svg>
+        </button>
+    </div>
+
+    <!-- The header is the 'home' section -->
+    <header id="home">
+        <div class="hero-content">
+            <div class="avatar-container">
+                <img src="logo/android-chrome-512x512.png" alt="Profile" class="profile-pic">
+            </div>
+            <h1>Dr Daniel Zhang</h1>
+            <p class="title-sub">Senior Lecturer & Module Leader in AI/ML<br>PhD, MSc, BEng, FHEA | Falmouth University
+            </p>
+            <div class="social-links">
+                <!-- <a href="mailto:john.doe@university.ac.uk" title="Email" class="email"
+                    style="font-family: 'Roboto Mono'; margin-top: 20px; color: var(--text-muted); text-decoration: none;">
+                    john.doe@university.ac.uk
+                </a> -->
+                <a href="mailto:daniel.zhang@falmouth.ac.uk" title="Email" class="email">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24"
+                        fill="currentColor">
+                        <path fill-rule="evenodd"
+                            d="M2 5c0-1.1.9-2 2-2h16c1.1 0 2 .9 2 2v14c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V5zm18 1L12 11.5 4 6v2l8 5.5 8-5.5V6zm0 12H4V9.5l8 5.5 8-5.5V18z" />
+                    </svg>
+                </a>
+                <a href="https://www.falmouth.ac.uk/staff/dr-daniel-zhang" title="University Profile" target="_blank">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24"
+                        fill="currentColor">
+                        <path d="M12 3L1 9l11 6l9-4.91V17h2V9M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82Z" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <nav id="navbar">
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#teaching">Teaching</a>
+        <a href="#research">Research</a>
+        <a href="#education">Education</a>
+        <a href="#award">Awards</a>
+        <a href="#publications">Publications</a>
+    </nav>
+
+    <!-- All content sections are wrapped in 'main' for the PDF script to find them -->
+    <main id="main-content">
+        <section id="about">
+            <div class="container">
+                <h2>About Me</h2>
+                <p>An accomplished Senior Lecturer and module leader with expertise in <span class="bold-a">Artificial
+                        Intelligence & Machine Learning (AI/ML)</span> and <span class="bold-a">Computational
+                        Engineering</span>; Fellow of the Higher Education Academy (<span class="bold-a">FHEA</span>);
+                    Winner of <a class="bold-a italic-a">Rolls-Royce Defence Pioneering Digital
+                        Award</a> and <a class="bold-a italic-a">Rolls-Royce CFD Review Meeting Best Poster
+                        Award</a>; Experienced senior researcher served Rolls-Royce UTC at the University of Southampton
+                    over a decade; The creator of 10+ successful software packages and platforms for Rolls-Royce;
+                    Innovative solutions and consultancy services provider collaborated with industrial clients such as
+                    Airbus, the Royal Air Force, the UK Ministry of Defence (MoD), Defence Science and Technology
+                    Laboratory (DSTL), UK Aerospace Technology Institute (ATI), etc.</p>
+
+                <h3>PhD Supervision Opportunities</h3>
+                <p>
+                    I am currently accepting applications from prospective PhD students in AI/ML and Digital Games
+                    Research. If you are driven, innovative, and eager to contribute to impactful research, please
+                    contact me with your CV and research interests.</p>
+            </div>
+        </section>
+
+        <section id="experience">
+            <div class="container">
+                <h2>Working Experience</h2>
+                <!-- FIX: Changed from divs to a ul with li.cv-item -->
+                <ul>
+                    <li class="cv-item">
+                        <div class="date">2023 - PRESENT</div>
+                        <strong>Senior Lecturer</strong>, Games Academy, Falmouth University
+                        <ul>
+                            <li>Course leader of MSc programme: <span class="italic-a">Artificial Intelligence for
+                                    Games</span></li>
+                            <li>Module leader of 2 MSc courses: <span class="italic-a">Classical Artificial
+                                    Intelligence</span>
+                                (COMP712) and <span class="italic-a">Machine Learning</span> (COMP714)</li>
+                            <li>Module leader of undergraduate course: <span class="italic-a">Computational
+                                    Mathematics</span>
+                                (COMP201)</li>
+                            <li>Deliver lectures, supervise, and evaluate individual and group projects at both
+                                postgraduate and
+                                undergraduate levels</li>
+                            <li>Organise and conduct workshops on AI and ML topics for both undergraduate and
+                                postgraduate students
+                            </li>
+                            <li>Actively participating in and enhancing the university's student recruitment process
+                            </li>
+                            <li>Invited consultancy talk delivered to the University Board of Governors</li>
+                            <!-- <li>Keep on monitoring and participate in improving course curriculum</li> -->
+                            <li>Course design team member of the new undergraduate programmes <span
+                                    class="italic-a">BSc(Hons)
+                                    Artificial Intelligence</span> and <span class="italic-a">BSc(Hons)
+                                    Software Engineering</span></li>
+                            <li>Supervise research projects of PhD students</li>
+                            <li>Participant in departmental administrative tasks and other research activities</li>
+                        </ul>
+                    </li>
+                    <li class="cv-item">
+                        <div class="date">2019 - 2023</div>
+                        <strong>Senior Research Fellow</strong>, University of Southampton (Rolls-Royce UTC)
+                        <ul>
+                            <li>Won <span class="italic-a">Rolls-Royce CFD Conference Best Poster Award</span> in 2024
+                            </li>
+                            <li>Won <span class="italic-a">Rolls-Royce Pioneering Digital Award in 2020</span> for the
+                                work
+                                on improving the aircraft engine afterburner optimisation platform</li>
+                            <li>Explored <a
+                                    href="https://www.southampton.ac.uk/engineering/research/research-areas/empowering-gas-turbine-engineers.page"
+                                    target="_blank">gas turbine engine geometry recognition and generation</a> utilising
+                                AI/ML/DL
+                                techniques including convolutional neural network (CNN) and generative adversarial
+                                network (GAN)
+                            </li>
+                            <li>Collaborate with leading industry partner Rolls-Royce plc. and other technology centres
+                                including
+                                the University of Oxford, Cambridge Fluid Dynamic Group, Queen's University Belfast and
+                                Rolls-Royce
+                                UTC</li>
+                            <li>Publish scientific papers and disseminate research outcomes in peer-reviewed journals
+                                and
+                                international meetings</li>
+                            <li>Supervise and monitor PhD students' research projects</li>
+                        </ul>
+                    </li>
+                    <li class="cv-item">
+                        <div class="date">2012 - 2019</div>
+                        <strong>Research Fellow</strong>, University of Southampton (Rolls-Royce UTC)
+                        <ul>
+                            <li>Architect and implement <span class="italic-a">PROMETHEUS</span> - an automated 3D
+                                combustor
+                                design and optimisation platform for Rolls-Royce, which has been deployed globally at 5
+                                R&D centres
+                            </li>
+                            <li>Participant in applications and keep on attracting funding for ~10 successor projects
+                            </li>
+                            <li>Architect and implement 3D geometry parameterisation and other computational techniques
+                                for
+                                combustor design and optimisation</li>
+                            <li>Collaborate with leading industrial companies and esteemed universities to embed best
+                                practices in
+                                the research and train Rolls-Royce engineers</li>
+                            <li>Publish scientific papers in peer-reviewed journals and attend national & international
+                                meetings
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="teaching">
+            <div class="container">
+                <h2>Teaching & Supervision</h2>
+                <!-- FIX: Added 'two-column-layout' class for PDF script -->
+                <div class="dual-column two-column-layout">
+                    <!-- FIX: Added 'column' class for PDF script -->
+                    <div class="animate-card column">
+                        <h3>Course Leadership</h3>
+                        <ul>
+                            <li>Course leader: MSc AI for Games</li>
+                            <li>Module leader: Classical AI (COMP712)</li>
+                            <li>Module leader: Machine Learning (COMP714)</li>
+                            <li>Module leader: Computational Mathematics (COMP201)</li>
+                            <li>Postgraduate Research Development Programme: Advanced
+                                Quantitative Data Analysis</li>
+                            <br>
+                            <li>Guest Lecturer (UoS): Introduction to Advanced Mechanical Engineering Science (SESM6039)
+                            </li>
+                            <li>Lab Supervisor and Examiner: University of Southampton</li>
+                        </ul>
+                    </div>
+                    <div class="animate-card column">
+                        <h3>Supervision</h3>
+                        <ul>
+                            <li>2 Active PhD Candidates
+                                <ul>
+                                    <li>Jamillah Knowles</li>
+                                    <li>Lucie Akerman</li>
+                                </ul>
+                            </li>
+                            <li>2 Completed PhD Researchers
+                                <ul>
+                                    <li>Gerico Vidanes</li>
+                                    <li>Thomas Weichlein</li>
+                                </ul>
+                            </li>
+                            <li>10+ MSc Dissertations Supervised</li>
+                            <li>20+ MSc Dissertations Supervised</li>
+                            <li>Group projects supervision</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="research">
+            <div class="container">
+                <h2>Research Interests</h2>
+                <!-- FIX: Added 'two-column-layout' class for PDF script -->
+                <div class="dual-column two-column-layout">
+                    <!-- FIX: Added 'column' class for PDF script -->
+                    <div class="animate-card column">
+                        <h3>Interests</h3>
+                        <ul>
+                            <li>Artificial Intelligence & Machine Learning (AI/ML)</li>
+                            <li>AI for Games & Interactive Media</li>
+                            <li>Generative AI & Deep Learning</li>
+                            <li>Computational Engineering</li>
+                            <li>Data-Driven Modelling & Simulation</li>
+                            <li>2D/3D CAD model generation</li>
+                            <li>Graph Neural Networks (GNNs)</li>
+                            <li>Reinforcement Learning (RL)</li>
+                        </ul>
+                    </div>
+                    <div class="animate-card column">
+                        <h3>Projects</h3>
+                        <ul>
+                            <li>ENGAN - AI-Driven Geometry Recognition & Generation for Gas Turbine Engines</li>
+                            <li>COLIBRI - Collaboration Across Business Boundaries</li>
+                            <li>PROMETHEUS - Automated 3D Combustor Design & Optimisation Platform</li>
+                            <li>Exhaust Integration in CD99</li>
+                            <li>Pedestal Tile Cooling Feed Hole Optimisation</li>
+                            <li>DYNAMO - Smart System for Thermal Analysis of Combustor, part of CleanSky2</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="education">
+            <div class="container">
+                <h2>Education History</h2>
+                <!-- FIX: Changed from divs to a ul with li.cv-item -->
+                <ul>
+                    <li class="cv-item">
+                        <strong>PhD in Computing and IT</strong>, University of Gloucestershire, UK (2009 - 2012)
+                    </li>
+                    <li class="cv-item">
+                        <strong>MSc in Computer Science and Applications (with Distinction)</strong>, University
+                        of Warwick, UK (2007 - 2008)
+                    </li>
+                    <li class="cv-item">
+                        <strong>BEng in Electrical Engineering and Automation Science</strong>, Beijing
+                        University of Aeronautics and Astronautics, China (2000 - 2004)
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="award">
+            <div class="container">
+                <h2>Awards & Engagement</h2>
+                <!-- FIX: Changed from divs to a ul with li.cv-item -->
+                <ol>
+                    <li class="cv-item">
+                        <strong>Fellow of the Higher Education Academy (FHEA)</strong>, Advance HE (2025)
+                        <p>Recognised for commitment to professionalism in teaching and learning in higher education.
+                        </p>
+                    </li>
+                    <li class="cv-item">
+                        <strong>Best Poster Award</strong>, Rolls-Royce CFD Review Conference (2024)
+                        <p>For outstanding contributions to machine learning application in gas turbine engine design.
+                        </p>
+                    </li>
+                    <li class="cv-item">
+                        <strong>Defence Pioneer Digital Award</strong>, Rolls-Royce (2020)
+                        <p>Recognized for outstanding contributions to digital transformation in defence systems.</p>
+                    </li>
+                    <li class="cv-item">
+                        <strong>Full PhD Scholarship</strong>, University of Gloucestershire (2009 - 2012)
+                        <p>Awarded for exceptional academic potential and research promise in computing and IT.</p>
+                    </li>
+                    <li class="cv-item">
+                        <strong>MSc with Distinction</strong>, University of Warwick (2008)
+                        <p>Graduated with distinction for outstanding academic performance in computer science.</p>
+                    </li>
+                    <li class="cv-item">
+                        <strong>First-Class Honours</strong>, Beijing University of Aeronautics and Astronautics (2004)
+                        <p>Graduated with first-class honours for exceptional academic achievement in electrical
+                            engineering.</p>
+                    </li>
+                    <li class="cv-item">Invited Reviewer of International Journal of Social Research Methodology</li>
+                    <li class="cv-item">Research Integrity & Ethics Committee (RIEC) panel member</li>
+                    <li class="cv-item">Research & Knowledge Exchange Committee (RKEC) panel member</li>
+                    <li class="cv-item">Equality, Diversity & Inclusion (EDI) Working Group panel member</li>
+                    <li class="cv-item">Professional Member (MBCS) of British Computer Society</li>
+                    <li class="cv-item">Invited Reviewer of CHI2025 Conference</li>
+                    <li class="cv-item">Panel Committee Member, ACM Technical Symposium on Computer Science Education
+                        2024</li>
+                    <li class="cv-item">Programme Committee Member, International Symposium on Creative Computing (ISCC
+                        2024)</li>
+                    <li class="cv-item">Committee Member for New Course Validation, Falmouth University 2024</li>
+                    <li class="cv-item">Contributed to Game Quality Forum Global 2024 Report</li>
+                    <li class="cv-item">Invited Reviewer of the Journal of Games and Culture</li>
+                    <li class="cv-item">Invited Book Evaluator for Cambridge University Publish Ltd.</li>
+                </ol>
+            </div>
+        </section>
+
+        <section id="publications">
+            <div class="container">
+                <h2>Selected Publications</h2>
+                <!-- FIX: Changed to ul and li.cv-item, keeping publication-list for potential specific styling -->
+                <h3>Book Chapters</h3>
+                <ol class="publication-list">
+                    <li class="cv-item">Shujun Zhang, Donghui Chen, Kevin Hapeshi, Xu Zhang (2016). "3-D Modelling of
+                        Biological Systems for Biomimetics", in Eddie Y K Ng and Yuehao Luo (ed.) Bio-Inspired Surfaces
+                        and
+                        Applications. Singapore: World Scientific, pp. 325-392. ISBN 978-981-4704-48-9
+                        <!--a href="https://worldscientific.com/doi/10.1142/9789814704496_0010" target="_blank">&gt;&gt;LINK</a-->
+                    </li>
+                </ol>
+                <h3>Research Papers</h3>
+                <ol class="publication-list">
+                    <li class="cv-item">Gerico Vidanes, David Toal, Xu Zhang, Andy Keane. (2025) "An Empirical Review of
+                        Uncertainty Estimation for
+                        Quality Control in CAD Model Segmentation". EANN / EAAAI (Engineering Applications and
+                        Advances of Artificial
+                        Intelligence), Cyprus, 26 – 29 June, 2025.</li>
+
+                    <li class="cv-item">Gerico Vidanes, David Toal, Xu Zhang, Andy Keane. (2024) "Point-based Graph
+                        Neural
+                        Networks for Semantic Feature
+                        Recognition in Computer-aided Design/Engineering". Journal of Computer-Aided Design, 166
+                        (C), doi:
+                        10.1016/j.cad.2023.103629
+                        <!--a href="https://www.sciencedirect.com/science/article/pii/S0010448523001616" target="_blank">&gt;&gt;LINK</a-->
+                        <!--a href="https://dl.acm.org/doi/10.1016/j.cad.2023.103629">&gt;&gt;LINK</a-->
+                    </li>
+
+                    <li class="cv-item">Thomas Weichlein, Shujun Zhang, Pengzhi Li, Xu Zhang. (2023) "Data Flow Control
+                        for
+                        Network Load Balancing in
+                        IEEE Time-Sensitive Networks for Automation", IEEE Access 11(1), doi:
+                        10.1109/ACCESS.2023.3243286
+                        <!--a href="https://ieeexplore.ieee.org/document/10040635">&gt;&gt;LINK</a-->
+                    </li>
+
+                    <li class="cv-item">David J.J. Toal, Xu Zhang, Andy J. Keane, Chin Yik Lee, Marco Zedda. (2021) "The
+                        Potential of a Multi-fidelity
+                        Approach to Gas Turbine Combustor Design Optimization". Journal of Engineering for Gas
+                        Turbines and Power,
+                        Vol.143 (5), doi: 10.1115/1.4048654
+                        <!--a href="https://asmedigitalcollection.asme.org/gasturbinespower/article-abstract/143/5/051002/1087604/The-Potential-of-a-Multifidelity-Approach-to-Gas?redirectedFrom=fulltext" target="_blank">&gt;&gt;LINK</a-->
+                    </li>
+
+                    <li class="cv-item">K. Nagabandi, S. Mills, X. Zhang, D. J. J. Toal, A. J. Keane (2017)
+                        "Surrogate-based
+                        Design Optimisation of
+                        Combustor Tile Cooling Feed Holes", Proceedings of the 2017 Gas Turbine India Conference
+                        (GTIndia2017), 7-8th
+                        December, Bangalore, India
+                        <!--a href="https://asmedigitalcollection.asme.org/GTINDIA/proceedings-abstract/GTINDIA2017/58509/V001T03A007/243914" target="_blank">&gt;&gt;LINK</a-->
+                    </li>
+
+                    <li class="cv-item">Xu Zhang, David J.J. Toal, Andy J. Keane, Simon Stow, Marco Zedda (2017)
+                        "Combustor
+                        Design Optimization Using
+                        the Prometheus Design System", 23rd International Society of Air-breathing Engines
+                        (ISABE17), 03-08 Sep, 2017,
+                        Manchester, UK
+                        <!--a href="https://eprints.soton.ac.uk/413785/" target="_blank">&gt;&gt;LINK</a-->
+                    </li>
+
+                    <li class="cv-item">Xu Zhang, David J.J. Toal, Neil W. Bressloff, Andy J. Keane, Frederic Witham,
+                        Jonathan
+                        Gregory, Simon Stow,
+                        Christopher Goddard, Marco Zedda, Mark Rogers. (2016) "Isothermal Combustor Prediffuser
+                        & Fuel Injector Feed Arm
+                        Design Optimization Using the Prometheus Design System", Journal of Engineering for Gas
+                        Turbines and Power,
+                        Vol.138(6), pp.1-19. doi:10.1115/1.4031711
+                        <!--a href="https://asmedigitalcollection.asme.org/gasturbinespower/article-abstract/138/6/061504/374172/Isothermal-Combustor-Prediffuser-and-Fuel-Injector?redirectedFrom=fulltext" target="_blank">&gt;&gt;LINK</a-->
+                    </li>
+
+                    <li class="cv-item">Xu Zhang, David J.J. Toal, Neil W. Bressloff, Andy J. Keane, Frederic Witham,
+                        Jonathan
+                        Gregory, Simon Stow,
+                        Christopher Goddard, Marco Zedda, Mark Rogers (2014). "Prometheus: A Geometry-centric
+                        Optimisation System for
+                        Combustor Design", Proceedings of ASME Turbo Expo 2014: Turbine Technical Conference and
+                        Exposition, 16-20th
+                        June, 2014, Düsseldorf, Germany
+                        <!--a href="https://asmedigitalcollection.asme.org/GT/proceedings-abstract/GT2014/45684/V04AT04A061/235003" target="_blank">&gt;&gt;LINK</a-->
+                    </li>
+
+                    <li class="cv-item">Xu Zhang, Shujun Zhang, Kevin Hapeshi (2013). "A New Parameterised Feature-based
+                        Generic
+                        3D Human Face Model for
+                        Emotional Bio-robots", Applied Mechanics and Materials, Vol.461, pp.838-847
+                        <!--a href="https://www.scientific.net/AMM.461.838" target="_blank">&gt;&gt;LINK</a-->
+                    </li>
+
+                    <li class="cv-item">Xu Zhang, Leran Wang, David Toal, Andy Keane (2013). "Design Automation using NX
+                        Open:
+                        Applications in
+                        Prometheus and E-BREAK". Rolls-Royce 11th ADOS Conference, 18-19th September, Derby, UK.
+                    </li>
+
+                    <li class="cv-item">Xu Zhang, Shujun Zhang, Kevin Hapshi (2013). "A feature-based 3D human face
+                        model for
+                        emotional bio-robots". 4th
+                        International Conference of Bionic Engineering (ICBE'13), 13-16th August, Nanjing,
+                        China.</li>
+
+                    <li class="cv-item">David J.J. Toal, Xu Zhang, Neil W. Bressloff, Andy J. Keane (2012). "Prometheus:
+                        Embedding Knowledge & Best
+                        Practice within CAD for Combustor Design Optimisation". Rolls-Royce 10th ADOS
+                        Conference, 13-14th September,
+                        Winchester, UK.</li>
+
+                    <li class="cv-item">Xu Zhang, Shujun Zhang, Kevin Hapeshi (2010). “A new method for face detection
+                        in colour
+                        images for emotional
+                        bio-robots”. Science China - Series E: Technological Sciences. Vol. 53(11). pp. 2983-
+                        988
+                        <!--a href="https://link.springer.com/article/10.1007/s11431-010-4132-z" target="_blank">&gt;&gt;LINK</a-->
+                    </li>
+
+                    <li class="cv-item">Xu Zhang, Shujun Zhang (2010). "Face detection in colour images based on skin
+                        colour
+                        model and eye detection".
+                        Proceeding of 3rd International Conference of Bionic Engineering, 14-16th September,
+                        Zhuhai, China.</li>
+                </ol>
+            </div>
+        </section>
+    </main>
+
+    <footer
+        style="padding: 60px; text-align: center; border-top: 1px solid var(--border); color: var(--text-muted); font-size: 0.9rem;">
+        <p>&copy; 2025 - <span id="current-year"></span> Your Name. All rights reserved.</p>
+        <div class="powered-by">
+            <span style="font-size: 0.9em; margin-right: 10px;">Powered by</span>
+            <a href="https://html.spec.whatwg.org/" title="HTML5">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="24" height="24">
+                    <path fill-rule="evenodd"
+                        d="M1.5 0h21l-1.9 21.2L12 24l-8.6-2.8L1.5 0zm15.6 5H6.3l.6 7.2h7.9l-.4 4.1-2.4.7-2.4-.7-.1-1.8H7.2l.3 4.4 4.5 1.2 4.5-1.2.7-8.7H9.7l-.2-2.3h7.7L17.1 5z" />
+                </svg>
+            </a>
+            <a href="https://www.w3.org/Style/CSS/Specs.html" title="CSS3">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="24" height="24">
+                    <path fill-rule="evenodd"
+                        d="M1.5 0h21l-1.9 21.2L12 24l-8.6-2.8L1.5 0zm16.3 4.7H6.2l.2 2.3h10l-.2 2.3H9.4l.2 2.3h7l-.4 4.1-2.7.7-2.7-.7-.2-1.8H7l.4 4.4 4.6 1.2 4.6-1.2 1.2-13.6z" />
+                </svg>
+            </a>
+            <a href="https://www.javascript.com/" title="JavaScript">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="24" height="24">
+                    <path fill-rule="evenodd"
+                        d="M1.5 0h21l-1.9 21.2L12 24l-8.6-2.8L1.5 0zm9.5 5v13H6.5v-2.5h2V5H11zm7.5 0h-5.5v7.5h3.5v2.5h-3.5v3h6V9H16V7.5h2.5V5z" />
+                </svg>
+            </a>
+        </div>
+    </footer>
+
+    <script>
+        // All custom scripts have been moved to working_script.js
+    </script>
+
+    <!-- Scripts for PDF Generation -->
+    <script src="components/jspdf.umd.min.js"></script>
+    <script src="components/work_script.js"></script>
+</body>
+
+</html>
