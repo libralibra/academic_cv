@@ -36,8 +36,11 @@ document.addEventListener('DOMContentLoaded', () => {
         const addHeaderFooter = (isSubsequentPage = false) => {
             const d = new Date();
             const versionString = `v.${d.getFullYear()}${String(d.getMonth() + 1).padStart(2, '0')}${String(d.getDate()).padStart(2, '0')}`;
-            const nameText = document.querySelector('#home h1')?.textContent.trim() || "CV";
-            const jobTitle = document.querySelector('#home p.title-sub')?.textContent.trim() || "";
+            const nameText = document.querySelector('#home h1.name')?.textContent.trim() || "CV";
+            const jobTitle = document.querySelector('#home p.title-sub')?.innerText
+                .replace(/\n/g, ' | ')      // 替换换行为空格
+                .replace(/\s+/g, ' ')       // 将多个连续空格合并为一个
+                .trim() || "";              // 去除首尾空白
             const emailEl = document.querySelector('.hero-content .email');
             const emailText = emailEl ? emailEl.getAttribute('href').replace(/^mailto:/i, '') : "";
             const headerInfo = [nameText, jobTitle, emailText].filter(part => part.length > 0).join(' | ');
@@ -77,18 +80,21 @@ document.addEventListener('DOMContentLoaded', () => {
             emailText = emailHref.replace(/^mailto:/i, '');
         }
 
-        const heroName = document.querySelector('#home h1');
-        const heroTitle = document.querySelector('#home p.title-sub');
+        const heroName = document.querySelector('#home h1.name')?.textContent.trim() || "Dr Daniel Zhang";
+        const heroTitle = document.querySelector('#home p.title-sub')?.innerText
+            .replace(/\n/g, ' | ')      // 替换换行为空格
+            .replace(/\s+/g, ' ')       // 将多个连续空格合并为一个
+            .trim() || "";              // 去除首尾空白
 
         doc.setFont('Helvetica', 'bold');
         doc.setFontSize(22);
         cursorY += 10;
-        doc.text(heroName.textContent.trim(), pageWidth / 2, cursorY, { align: 'center' });
+        doc.text(heroName, pageWidth / 2, cursorY, { align: 'center' });
 
         cursorY += 20;
         doc.setFont('Helvetica', 'normal');
         doc.setFontSize(11);
-        doc.text(heroTitle.textContent.trim(), pageWidth / 2, cursorY, { align: 'center' });
+        doc.text(heroTitle, pageWidth / 2, cursorY, { align: 'center' });
 
         if (emailText) {
             cursorY += 15;
@@ -126,7 +132,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             const contentNodes = section.querySelector('.container').children;
             for (const node of contentNodes) {
-                if (node.tagName === 'H2') continue;
+                if (node.tagName === 'H2' || node.classList.contains('no_pdf')) continue;
                 processNode(node);
             }
             cursorY += 15;
