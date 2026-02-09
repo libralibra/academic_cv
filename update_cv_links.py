@@ -21,7 +21,8 @@ links = {
     '<button id="phone_btn_me" onclick="revealInfo(': '<!--button id="phone_btn_me" onclick="revealInfo(',
     'id="phone_me"></span>': 'id="phone_me"></span-->',
     # get rid of the personal email icon
-    '<span class="print-show"><a class="fa fa-envelope fa-2x" aria-hidden="true" href="mailto:xenos.z@outlook.com" title="Email Me" alt="Email Me" style="cursor: pointer"></a></span>': "",
+    '<span class="print-show">': '<!--span class="print-show">',
+    'alt="Email Me" style="cursor: pointer"></a></span>': 'alt="Email Me" style="cursor: pointer"></a></span-->',
 }
 
 
