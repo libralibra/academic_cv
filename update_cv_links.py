@@ -22,7 +22,7 @@ links = {
     'id="phone_me"></span>': 'id="phone_me"></span-->',
     # get rid of the personal email icon
     '<span class="print-show">': '<!--span class="print-show">',
-    'alt="Email Me" style="cursor: pointer"></a></span>': 'alt="Email Me" style="cursor: pointer"></a></span-->',
+    'style="cursor: pointer"></a></span>': 'style="cursor: pointer"></a></span-->',
 }
 
 
