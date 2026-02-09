@@ -17,7 +17,7 @@
 </head>
 
 <body class="cv">
-    <header class="cv">
+    <header class="cv autoheader">
         <h1 class="caption"><a href="https://www.falmouth.ac.uk/staff/dr-daniel-zhang"
                 title="visit Dr Xu Zhang's university profile page" target="_blank"><span class="blue">Dr Daniel (Xu)
                     Zhang</span></a></h1>
@@ -39,14 +39,23 @@
             Computational Engineering</span><br>
 
         <span class="hidden">
-            <span class="smalltext"> >>> View the <a href="index.html" class="bold-a italic-a">interactive version</a>
-                or the <a href="Teaching.html" class="bold-a italic-a">teaching</a> and <a href="Activities.html"
-                    class="bold-a italic-a">other</a>
+            <span class="smalltext"> >>> View the <span class="link1"><a href="index.html"
+                        class="bold-a italic-a">interactive version</a></span>
+                or the <span class="link2"><a href="Teaching.html" class="bold-a italic-a">teaching</a></span> and <span
+                    class="link3"><a href="Activities.html" class="bold-a italic-a">other</a></span>
                 activities</span><br>
             <!--button id="email_btn_me" onclick="revealInfo('email_btn_me','email_me')">Reveal Email</button> <span
                 class="hidden-item" id="email_me"></span-->
             <!--button id="phone_btn_me" onclick="revealInfo('phone_btn_me','phone_me')">Reveal Number</button> <span
                 class="hidden-item darkblue" id="phone_me"></span-->
+
+            <h3 class="bold-a red">PhD Supervision Opportunities</h3>
+            <p>
+                I am currently accepting applications from prospective PhD students in <a class="bold-a italic-a">AI/ML
+                    applications</a> and <a class="bold-a italic-a">Digital Games
+                    Research</a>. If you are driven, innovative, and
+                eager to contribute to impactful research, please
+                contact me with your CV and research interests.</p>
         </span>
     </header>
 
@@ -72,7 +81,7 @@
         </article>
 
         <!-- Working and Research -->
-        <article>
+        <article class="working">
             <h3 class="caption">Working & Research</h3>
             <hr width="100%;" color="gray" size="3">
 
@@ -132,7 +141,7 @@
         </article>
 
         <!-- Teaching and Supervision -->
-        <article>
+        <article class="teaching">
             <h3 class="caption">Teaching & Supervision <a class="hidden" href="Teaching.html" title="more details"
                     alt="more details"> >>> </a></h3>
             <hr width="100%;" color="gray" size="3">
@@ -188,7 +197,7 @@
         </article>
 
         <!-- Award and Achievement -->
-        <article>
+        <article class="award">
             <h3 class="caption">Award & Achievement</h3>
             <hr width="100%;" color="gray" size="3">
             <ul>
@@ -204,7 +213,7 @@
         </article>
 
         <!-- Engagement -->
-        <article>
+        <article class="engagement">
             <h3 class="caption">Engagement</h3>
             <hr width="100%;" color="gray" size="3">
             <ul>
@@ -225,10 +234,11 @@
         </article>
 
         <!-- Research Project -->
+        <article class="project"></article>
         <script id="project_list" src="../../assets/dist/js/project.js"></script>
 
         <!-- Education History -->
-        <article>
+        <article class="education">
             <h3 class="caption">Education History</h3>
             <hr width="100%;" color="gray" size="3">
             <ul>
@@ -242,7 +252,7 @@
         </article>
 
         <!-- Other Skills -->
-        <article>
+        <article class="skill">
             <h3 class="caption">Other Skill</h3>
             <hr width="100%;" color="gray" size="3">
             <ul>
@@ -265,6 +275,7 @@
         </article>
 
         <!-- Publication List -->
+        <article class="publication"></article>
         <script id="pub_list" src="./components/pub_list.js"></script>
 
 

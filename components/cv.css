@@ -240,6 +240,14 @@ main,
     color: dodgerblue;
 }
 
+.green {
+    color: rgb(0, 255, 85);
+}
+
+.red {
+    color: rgb(233, 29, 26);
+}
+
 table {
     margin: 0 auto;
 }
