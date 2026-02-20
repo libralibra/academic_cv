@@ -161,11 +161,6 @@ footer {
     text-decoration-skip-ink: none;
 }
 
-.right-align-inline {
-    float: right;
-    display: inline-block;
-}
-
 /* main content includes left and right columns */
 main,
 .main {
@@ -240,14 +235,6 @@ main,
     color: dodgerblue;
 }
 
-.green {
-    color: rgb(0, 255, 85);
-}
-
-.red {
-    color: rgb(233, 29, 26);
-}
-
 table {
     margin: 0 auto;
 }
@@ -270,23 +257,4 @@ table {
 
 #myBtn:hover {
     background-color: #555;
-}
-
-@media print {
-    .hidden {
-        display: none !important;
-    }
-
-    /* force all elements to black and white */
-    * {
-        color: black !important;
-        background: transparent !important;
-        box-shadow: none !important;
-        text-shadow: none !important;
-    }
-
-    .italic-a, .bold-a {
-        color: black !important;
-        text-shadow: none !important;
-    }
 }
