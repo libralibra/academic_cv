@@ -14,9 +14,15 @@ if (window.location.href.indexOf("index.html") > -1 ||
                     <li>Shujun Zhang, Donghui Chen, Kevin Hapeshi, Xu Zhang (2016). "3-D Modelling of Biological Systems for Biomimetics", in Eddie Y K Ng and Yuehao Luo (ed.) Bio-Inspired Surfaces and Applications. Singapore: World Scientific, pp. 325-392. ISBN 978-981-4704-48-9 <!--a href="https://worldscientific.com/doi/10.1142/9789814704496_0010" target="_blank">&gt;&gt;LINK</a--></li>
                 </ol>
 
+                <span class="bold-a">Report</span>
+                <ol>
+                    <li>Matt Watkins and Xu Zhang (2026). "An AI/ML-Powered Computer Vision Application for use with a Custom Agricultural Robot". Daffodil Robot Navigation Project Report. <!--a href="https://repository.falmouth.ac.uk/id/eprint/6369" target="_blank">&gt;&gt;LINK</a--></li>
+                </ol>
+
                 <span class="bold-a">Journal & Conference</span>
                 <ol>
                     <li>Gerico Vidanes, David Toal, Xu Zhang, Andy Keane. (2026) "Data-Efficient Neural Network Feature Recognition of B-Rep CAD Geometries: Mean Uncertainty as a Signal for Enough Training Data". Journal of Advanced Engineering Informatics (<a class="bold-a">submitted</a>) <!--a href="https://www.sciencedirect.com/science/article/pii/S0010448523001604" target="_blank">&gt;&gt;LINK</a--></li>
+                    <li>Xu Zhang. (2025) "Designing with Intelligence". In: The Great DebAIt Conference, 16th July 2025, Falmouth. <!--a href="https://repository.falmouth.ac.uk/6365/" target="_blank">&gt;&gt;LINK</a--></li>
                     <li>Gerico Vidanes, David Toal, Xu Zhang, Andy Keane. (2025) "An Empirical Review of Uncertainty Estimation for Quality Control in CAD Model Segmentation". EANN / EAAAI (Engineering Applications and Advances of Artificial Intelligence), Cyprus, 26 – 29 June, 2025.</li>
 
                     <li>Gerico Vidanes, David Toal, Xu Zhang, Andy Keane. (2024) "Point-based Graph Neural Networks for Semantic Feature Recognition in Computer-aided Design/Engineering". Journal of Computer-Aided Design, 166 (C), doi: 10.1016/j.cad.2023.103629 <!--a href="https://www.sciencedirect.com/science/article/pii/S0010448523001616" target="_blank">&gt;&gt;LINK</a--> <!--a href="https://dl.acm.org/doi/10.1016/j.cad.2023.103629">&gt;&gt;LINK</a--></li>
