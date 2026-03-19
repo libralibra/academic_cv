@@ -258,3 +258,8 @@ table {
 #myBtn:hover {
     background-color: #555;
 }
+
+/* 右对齐内联元素 */
+.right-align-inline {
+    float: right;
+}
