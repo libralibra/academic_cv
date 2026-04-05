@@ -197,8 +197,8 @@ h3 {
 /* FIX: Change selector from .cv-item to li.cv-item */
 li.cv-item {
     list-style: none;
-    margin-bottom: 20px;
-    padding: 20px;
+    margin-bottom: 10px;
+    padding: 10px;
     border-radius: 12px;
     border-left: 0px solid var(--accent);
     transition: 0.4s;
