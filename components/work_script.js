@@ -1,6 +1,32 @@
 // This script is a modified version of script.js, tailored for working.html.
 // It includes a custom PDF generation logic and all interactive behaviours.
 
+// Listen for scroll events
+window.onscroll = function() {
+  scrollFunction();
+};
+
+// Get the button element
+const backToTopBtn = document.getElementById("backToTop");
+
+// Toggles button visibility based on scroll depth
+function scrollFunction() {
+  if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+    backToTopBtn.style.display = "block";
+  } else {
+    backToTopBtn.style.display = "none";
+  }
+}
+
+// Scroll to the top of the document when the button is clicked
+backToTopBtn.addEventListener("click", () => {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth" // Optional: provides a smooth scrolling effect
+  });
+});
+
+// generate pdf
 document.addEventListener('DOMContentLoaded', () => {
 
     // --- PDF Generation Function (defined before use) ---
@@ -37,7 +63,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const d = new Date();
             const versionString = `v.${d.getFullYear()}${String(d.getMonth() + 1).padStart(2, '0')}${String(d.getDate()).padStart(2, '0')}`;
             const nameText = document.querySelector('#home h1.name')?.textContent.trim() || "CV";
-            const jobTitle = document.querySelector('#home p.title-sub')?.innerText
+            const jobTitle = document.querySelector('#home p span.title-sub')?.innerText
                 .replace(/\n/g, ' | ')      // 替换换行为空格
                 .replace(/\s+/g, ' ')       // 将多个连续空格合并为一个
                 .trim() || "";              // 去除首尾空白
@@ -81,7 +107,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         const heroName = document.querySelector('#home h1.name')?.textContent.trim() || "Dr Daniel Zhang";
-        const heroTitle = document.querySelector('#home p.title-sub')?.innerText
+        const heroTitle = document.querySelector('#home p span.title-sub')?.innerText
             .replace(/\n/g, ' | ')      // 替换换行为空格
             .replace(/\s+/g, ' ')       // 将多个连续空格合并为一个
             .trim() || "";              // 去除首尾空白

@@ -83,7 +83,7 @@ h1 {
     color: var(--primary);
 }
 
-.title-sub {
+.title-sub, .title-uni {
     font-size: 1.5rem;
     color: var(--text-muted);
     font-weight: 400;
