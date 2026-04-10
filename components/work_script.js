@@ -58,10 +58,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             }
         };
-
+		
+		// header info from the 2nd page
         const addHeaderFooter = (isSubsequentPage = false) => {
-            const d = new Date();
-            const versionString = `v.${d.getFullYear()}${String(d.getMonth() + 1).padStart(2, '0')}${String(d.getDate()).padStart(2, '0')}`;
             const nameText = document.querySelector('#home h1.name')?.textContent.trim() || "CV";
             const jobTitle = document.querySelector('#home p span.title-sub')?.innerText
                 .replace(/\n/g, ' | ')      // 替换换行为空格
@@ -78,13 +77,17 @@ document.addEventListener('DOMContentLoaded', () => {
             if (isSubsequentPage) {
                 doc.text(headerInfo, margin, margin / 2, { align: 'left' });
             }
-
-            doc.text(versionString, pageWidth - margin, margin / 2, { align: 'right' });
-            doc.text(`${pageCount}`, pageWidth / 2, pageHeight - margin / 2, { align: 'center' });
         };
-
+		
+		// version string and page number on all pages
         const finaliseHeaderFooter = () => {
+			const d = new Date();
+            const versionString = `v.${d.getFullYear()}${String(d.getMonth() + 1).padStart(2, '0')}${String(d.getDate()).padStart(2, '0')}`;
+			
             for (let i = 1; i <= pageCount; i++) {
+				// version string, top right
+				doc.text(versionString, pageWidth - margin, margin / 2, { align: 'right' });
+				// footer, page number
                 doc.setPage(i);
                 doc.setFontSize(8);
                 doc.setFont('Helvetica', 'normal');
@@ -125,18 +128,22 @@ document.addEventListener('DOMContentLoaded', () => {
         if (emailText) {
             cursorY += 15;
             doc.setFontSize(10);
-            doc.setTextColor(100);
+            //doc.setTextColor(100);
+			doc.setTextColor(0, 0, 255);
 
             const textWidth = doc.getTextWidth(emailText);
             const textX = (pageWidth - textWidth) / 2;
             doc.text(emailText, pageWidth / 2, cursorY, { align: 'center' });
             if (emailHref) {
                 doc.link(textX, cursorY - 10, textWidth, 12, { url: emailHref });
+				cursorY += 1;
+				doc.setDrawColor(0, 0, 255);
+				doc.line(textX, cursorY, textX + textWidth, cursorY);
             }
         }
 
         cursorY += 20;
-        doc.setDrawColor(200);
+        doc.setDrawColor(100);
         doc.line(margin, cursorY, pageWidth - margin, cursorY);
         cursorY += 25;
 
@@ -148,6 +155,8 @@ document.addEventListener('DOMContentLoaded', () => {
             doc.setFont('Helvetica', 'bold');
             doc.setFontSize(14);
             doc.setTextColor(0, 0, 0);
+			
+			// section title, uppercase
             const titleText = h2.textContent.trim().toUpperCase();
             doc.text(titleText, margin, cursorY);
             cursorY += 3;
@@ -172,6 +181,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     addText(node.textContent);
                     break;
                 case 'ul':
+				case 'ol':
                     addList(node);
                     break;
                 case 'div':
