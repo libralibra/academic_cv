@@ -279,6 +279,17 @@ nav a.active {
     border-bottom: 2px solid var(--primary);
 }
 
+/* font */
+.bold-a {
+    font-weight: bolder;
+    text-shadow: #333 0 0 1px;
+}
+
+.italic-a {
+    font-style: italic;
+    text-shadow: #333 0 0 1px;
+}
+
 @media (max-width: 768px) {
     .dual-column {
         grid-template-columns: 1fr;
