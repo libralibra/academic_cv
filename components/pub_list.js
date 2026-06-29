@@ -11,6 +11,8 @@ if (window.location.href.indexOf("index.html") > -1 ||
 
                 <span class="bold-a">Book Chapter</span>
                 <ol>
+                    <li>Xu Zhang (2026). "Machine Learning COMP714", in Richard Ferdig, Richard Hartshorne, Enrico Gandolfi, Laurie Campbell, and Jennifer Petit (ed.) Teaching AI: Syllabi, Pedagogy, and Best Practices in Higher Education. USA: EdTech Books. (<a class="bold-a">accepted</a>)<!--ISBN 978-981-4704-48-9 <a href="https://worldscientific.com/doi/10.1142/9789814704496_0010" target="_blank">&gt;&gt;LINK</a--></li>
+                    <li>Xu Zhang (2026). "Classical Artificial Intelligence COMP712", in Rick Ferdig, Emily Baumgartner, and Enrico Gandolfi (ed.) Teaching the Games, 2nd ed. USA: Play Story Press. (<a class="bold-a">accepted</a>) <!--ISBN 978-981-4704-48-9 <a href="https://worldscientific.com/doi/10.1142/9789814704496_0010" target="_blank">&gt;&gt;LINK</a--></li>
                     <li>Shujun Zhang, Donghui Chen, Kevin Hapeshi, Xu Zhang (2016). "3-D Modelling of Biological Systems for Biomimetics", in Eddie Y K Ng and Yuehao Luo (ed.) Bio-Inspired Surfaces and Applications. Singapore: World Scientific, pp. 325-392. ISBN 978-981-4704-48-9 <!--a href="https://worldscientific.com/doi/10.1142/9789814704496_0010" target="_blank">&gt;&gt;LINK</a--></li>
                 </ol>
 
