@@ -23,6 +23,8 @@ links = {
     # get rid of the personal email icon
     '<span class="print-show">': '<!--span class="print-show">',
     'style="cursor: pointer"></a></span>': 'style="cursor: pointer"></a></span-->',
+    # unify the publication list js file path for all html files
+    '<script id="pub-list" src="../../assets/dist/js/pub_list.js"></script>': '<script id="pub-list" src="./components/pub_list.js"></script>',
 }
 
 

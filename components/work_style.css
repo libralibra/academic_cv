@@ -9,20 +9,20 @@
     --bg-alt: #232629;
     --text-main: #e1e2e1;
     --text-muted: #9ba1a6;
-    --nav-bg: rgba(26, 28, 30, 0.9);
+    --nav-bg: rgba(51, 58, 65, 0.9);
     --border: #3c4043;
     --shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
 }
 
 /* Light Theme - light */
 [data-theme="light"] {
-    --primary: #002147;
+    --primary: #0c4587;
     --accent: #b61c1c;
     --bg-page: #ffffff;
     --bg-alt: #f1f3f4;
     --text-main: #1a1a1a;
     --text-muted: #5f6368;
-    --nav-bg: rgba(255, 255, 255, 0.9);
+    --nav-bg: rgba(232, 225, 225, 0.9);
     --border: #dadce0;
     --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
@@ -184,7 +184,7 @@ h2 {
     margin-bottom: 40px;
 }
 
-h3 {
+h3, h4 {
     color: var(--accent);
 }
 
@@ -290,7 +290,7 @@ nav a.active {
     text-shadow: #333 0 0 1px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 900px) {
     .dual-column {
         grid-template-columns: 1fr;
     }
