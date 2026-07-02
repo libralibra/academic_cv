@@ -2,8 +2,8 @@
 // It includes a custom PDF generation logic and all interactive behaviours.
 
 // Listen for scroll events
-window.onscroll = function() {
-  scrollFunction();
+window.onscroll = function () {
+    scrollFunction();
 };
 
 // Get the button element
@@ -11,19 +11,19 @@ const backToTopBtn = document.getElementById("backToTop");
 
 // Toggles button visibility based on scroll depth
 function scrollFunction() {
-  if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
-    backToTopBtn.style.display = "block";
-  } else {
-    backToTopBtn.style.display = "none";
-  }
+    if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+        backToTopBtn.style.display = "block";
+    } else {
+        backToTopBtn.style.display = "none";
+    }
 }
 
 // Scroll to the top of the document when the button is clicked
 backToTopBtn.addEventListener("click", () => {
-  window.scrollTo({
-    top: 0,
-    behavior: "smooth" // Optional: provides a smooth scrolling effect
-  });
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth" // Optional: provides a smooth scrolling effect
+    });
 });
 
 // generate pdf
@@ -48,18 +48,34 @@ document.addEventListener('DOMContentLoaded', () => {
         let cursorY = margin;
         let pageCount = 1;
 
+        const setNormalFont = (fontSize = 12, isBold = false) => {
+            const boldStyle = isBold ? 'bold' : 'normal';
+            doc.setFont('Times', boldStyle);
+            doc.setFontSize(fontSize);
+            doc.setTextColor(0, 0, 0);
+        }
+
+        const setTitleFont = (fontSize = 12, isBold = true) => {
+            const boldStyle = isBold ? 'bold' : 'normal';
+            doc.setFont('Helvetica', boldStyle);
+            doc.setFontSize(fontSize);
+            doc.setTextColor(0, 0, 0);
+        }
+
         const checkPageBreak = (neededHeight) => {
             if (cursorY + neededHeight > pageHeight - margin) {
                 doc.addPage();
                 pageCount++;
                 cursorY = margin;
+                // will change the first line of 2nd page text size,
+                // NEED REVISIT LATER <<<<<<<<<<<<<<<<<<<<<<<
                 if (pageCount > 1) {
-                    addHeaderFooter(true);
+                    // addHeaderFooter(true);
                 }
             }
         };
-		
-		// header info from the 2nd page
+
+        // header info from the 2nd page
         const addHeaderFooter = (isSubsequentPage = false) => {
             const nameText = document.querySelector('#home h1.name')?.textContent.trim() || "CV";
             const jobTitle = document.querySelector('#home p span.title-sub')?.innerText
@@ -70,35 +86,34 @@ document.addEventListener('DOMContentLoaded', () => {
             const emailText = emailEl ? emailEl.getAttribute('href').replace(/^mailto:/i, '') : "";
             const headerInfo = [nameText, jobTitle, emailText].filter(part => part.length > 0).join(' | ');
 
-            doc.setFontSize(8);
-            doc.setFont('Helvetica', 'normal');
-            doc.setTextColor(150);
+            setTitleFont(8, false);
+            doc.setTextColor(80, 80, 80); // Set text color to black
 
             if (isSubsequentPage) {
                 doc.text(headerInfo, margin, margin / 2, { align: 'left' });
+                doc.setDrawColor(80, 80, 80); // Set line color to black
+                doc.line(margin, margin / 2 + 2, pageWidth - margin, margin / 2 + 2); // Draw a line below the header
             }
         };
-		
-		// version string and page number on all pages
+
+        // version string and page number on all pages
         const finaliseHeaderFooter = () => {
-			const d = new Date();
+            const d = new Date();
             const versionString = `v.${d.getFullYear()}${String(d.getMonth() + 1).padStart(2, '0')}${String(d.getDate()).padStart(2, '0')}`;
-			
+
             for (let i = 1; i <= pageCount; i++) {
-				// version string, top right
-				doc.text(versionString, pageWidth - margin, margin / 2, { align: 'right' });
-				// footer, page number
+                // version string, top right
+                doc.text(versionString, pageWidth - margin, margin / 2, { align: 'right' });
+                // footer, page number
                 doc.setPage(i);
-                doc.setFontSize(8);
-                doc.setFont('Helvetica', 'normal');
-                doc.setTextColor(150);
+                setTitleFont(8, false);
+                doc.setTextColor(80, 80, 80);
                 doc.text(`${i} / ${pageCount}`, pageWidth / 2, pageHeight - margin / 2, { align: 'center' });
             }
         }
 
         // --- Content Generation ---
-        doc.setFont('Helvetica', 'normal');
-        doc.setTextColor(0, 0, 0);
+        setTitleFont(12, false);
 
         const emailElement = document.querySelector('.hero-content .email');
         let emailText = "";
@@ -115,35 +130,33 @@ document.addEventListener('DOMContentLoaded', () => {
             .replace(/\s+/g, ' ')       // 将多个连续空格合并为一个
             .trim() || "";              // 去除首尾空白
 
-        doc.setFont('Helvetica', 'bold');
-        doc.setFontSize(22);
+        setTitleFont(22, true);
         cursorY += 10;
         doc.text(heroName, pageWidth / 2, cursorY, { align: 'center' });
 
         cursorY += 20;
-        doc.setFont('Helvetica', 'normal');
-        doc.setFontSize(11);
+
+        setTitleFont(11, false);
         doc.text(heroTitle, pageWidth / 2, cursorY, { align: 'center' });
 
         if (emailText) {
             cursorY += 15;
-            doc.setFontSize(10);
-            //doc.setTextColor(100);
-			doc.setTextColor(0, 0, 255);
+            setNormalFont(10, false);
+            doc.setTextColor(0, 0, 255);
 
             const textWidth = doc.getTextWidth(emailText);
             const textX = (pageWidth - textWidth) / 2;
             doc.text(emailText, pageWidth / 2, cursorY, { align: 'center' });
             if (emailHref) {
                 doc.link(textX, cursorY - 10, textWidth, 12, { url: emailHref });
-				cursorY += 1;
-				doc.setDrawColor(0, 0, 255);
-				doc.line(textX, cursorY, textX + textWidth, cursorY);
+                cursorY += 1;
+                doc.setDrawColor(0, 0, 255);
+                doc.line(textX, cursorY, textX + textWidth, cursorY);
             }
         }
 
         cursorY += 20;
-        doc.setDrawColor(100);
+        doc.setDrawColor(80, 80, 80);
         doc.line(margin, cursorY, pageWidth - margin, cursorY);
         cursorY += 25;
 
@@ -152,16 +165,15 @@ document.addEventListener('DOMContentLoaded', () => {
             if (!h2) return;
 
             checkPageBreak(40);
-            doc.setFont('Helvetica', 'bold');
-            doc.setFontSize(14);
-            doc.setTextColor(0, 0, 0);
-			
-			// section title, uppercase
+
+            setTitleFont(14, true);
+
+            // section title, uppercase
             const titleText = h2.textContent.trim().toUpperCase();
             doc.text(titleText, margin, cursorY);
             cursorY += 3;
             // MODIFICATION: Set a darker colour for the underline
-            doc.setDrawColor(150);
+            doc.setDrawColor(80, 80, 80);
             doc.line(margin, cursorY, margin + doc.getTextWidth(titleText), cursorY);
             cursorY += 20;
 
@@ -181,7 +193,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     addText(node.textContent);
                     break;
                 case 'ul':
-				case 'ol':
+                case 'ol':
                     addList(node);
                     break;
                 case 'div':
@@ -192,15 +204,14 @@ document.addEventListener('DOMContentLoaded', () => {
                     }
                     break;
                 case 'h3':
+                case 'h4':
                     addH3(node.textContent);
                     break;
             }
         }
 
         function addText(text) {
-            doc.setFont('Times', 'normal');
-            doc.setFontSize(11);
-            doc.setTextColor(0, 0, 0);
+            setNormalFont(12, false);
             const cleanText = text.replace(/\s+/g, ' ').trim();
             const lines = doc.splitTextToSize(cleanText, contentWidth);
             checkPageBreak(lines.length * 12 + 10);
@@ -210,9 +221,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         function addH3(text) {
             checkPageBreak(20);
-            doc.setFont('Helvetica', 'bold');
-            doc.setFontSize(12);
-            doc.setTextColor(0, 0, 0);
+            setTitleFont(12, true);
             doc.text(text.trim(), margin, cursorY);
             cursorY += 20;
         }
@@ -235,9 +244,7 @@ document.addEventListener('DOMContentLoaded', () => {
             doc.text('•', margin, cursorY);
 
             // MODIFICATION: Set font to normal instead of bold
-            doc.setFont('Helvetica', 'normal');
-            doc.setFontSize(11);
-            doc.setTextColor(0, 0, 0);
+            setNormalFont(12, false);
 
             const availableWidth = dateText ? contentWidth - 15 - doc.getTextWidth(dateText) - 10 : contentWidth - 15;
             const mainLines = doc.splitTextToSize(mainLineText, availableWidth);
@@ -245,9 +252,6 @@ document.addEventListener('DOMContentLoaded', () => {
             let height = mainLines.length * 12;
 
             if (dateText) {
-                doc.setFont('Helvetica', 'normal');
-                doc.setFontSize(10);
-                doc.setTextColor(150);
                 const dateWidth = doc.getTextWidth(dateText);
                 doc.text(dateText, pageWidth - margin - dateWidth, cursorY);
             }
@@ -256,9 +260,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
             if (pText) {
                 cursorY += 5;
-                doc.setFont('Times', 'normal');
-                doc.setFontSize(11);
-                doc.setTextColor(50);
                 const pLines = doc.splitTextToSize(pText, contentWidth - 25);
                 doc.text(pLines, margin + 25, cursorY);
                 cursorY += pLines.length * 12;
@@ -267,15 +268,36 @@ document.addEventListener('DOMContentLoaded', () => {
             cursorY += 10;
         }
 
+        function addWkItem(li) {
+            checkPageBreak(40);
+
+            const dateText = li.querySelector('.date')?.textContent.trim() || '';
+            const titleText = li.querySelector('.wk-title')?.textContent.trim().replace(/\s+/g, ' ').trim() || '';
+
+            const liClone = li.querySelector("ul.wk-sublist");
+            if (liClone) {
+                // add job title and date
+                setTitleFont();
+                doc.text(titleText, margin, cursorY);
+                if (dateText) {
+                    const dateWidth = doc.getTextWidth(dateText);
+                    doc.text(dateText, pageWidth - margin - dateWidth, cursorY);
+                }
+                // add sublist items
+                cursorY += 20;
+                addList(liClone);
+            }
+        }
+
         function addList(ul) {
             const items = ul.querySelectorAll(':scope > li');
             for (const li of items) {
                 if (li.classList.contains('cv-item')) {
                     addCvItem(li);
+                } else if (li.classList.contains('wk-item')) {
+                    addWkItem(li);
                 } else {
-                    doc.setFont('Times', 'normal');
-                    doc.setFontSize(11);
-                    doc.setTextColor(0, 0, 0);
+                    setNormalFont();
 
                     let fullText = li.textContent.replace(/\s+/g, ' ').trim();
 

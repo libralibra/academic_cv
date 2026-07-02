@@ -19,12 +19,13 @@
 
 <body>
 
-    <!-- Floating Action Button Toolbar -->
+    <!-- Floating Action Button Toolbar: switch theme, export pdf, go to top -->
     <div class="fab-toolbar">
         <button class="icon-btn" id="theme-switcher" data-tooltip="Switch to Light Theme">
             <span class="theme-icon-light">
                 <svg id="theme-icon-sun" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
-                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="shaking">
                     <circle cx="12" cy="12" r="5"></circle>
                     <line x1="12" y1="1" x2="12" y2="3"></line>
                     <line x1="12" y1="21" x2="12" y2="23"></line>
@@ -38,13 +39,15 @@
             </span>
             <span class="theme-icon-dark">
                 <svg id="theme-icon-moon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
-                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="shaking">
                     <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
                 </svg></span>
         </button>
+
         <button class="icon-btn" id="export-pdf" data-tooltip="Export PDF File">
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
-                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="shaking">
                 <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
                 <polyline points="14 2 14 8 20 8"></polyline>
                 <line x1="16" y1="13" x2="8" y2="13"></line>
@@ -52,6 +55,7 @@
                 <polyline points="10 9 9 9 8 9"></polyline>
             </svg>
         </button>
+
         <button class="icon-btn" id="backToTop" data-tooltip="Go to Top" style="display: none;">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <path d="M18 15l-6-6-6 6" />
@@ -63,11 +67,11 @@
     <header id="home">
         <div class="hero-content">
             <div class="avatar-container">
-                <img src="logo/android-chrome-512x512.png" alt="Profile" class="profile-pic">
+                <img src="logo/android-chrome-512x512.png" alt="Profile" class="profile-pic shaking">
             </div>
             <h1 class="name">Dr Daniel Zhang</h1>
-            <p><span class="title-sub">Senior Lecturer & Module Leader in AI/ML<br>PhD, MSc, BEng, FHEA</span> <span
-                    class="title-uni">| Falmouth University</span>
+            <p><span class="title-sub">Senior Lecturer & Module Leader in AI/ML<br>PhD, MSc, BEng, FHEA</span>
+                <span class="title-uni">| Games Academy<br>Falmouth University</span>
             </p>
             <div class="social-links">
                 <!-- <a href="mailto:john.doe@university.ac.uk" title="Email" class="email"
@@ -76,14 +80,15 @@
                 </a> -->
                 <a href="mailto:daniel.zhang@falmouth.ac.uk" title="Email" class="email">
                     <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24"
-                        fill="currentColor">
+                        fill="currentColor" class="shaking">
                         <path fill-rule="evenodd"
                             d="M2 5c0-1.1.9-2 2-2h16c1.1 0 2 .9 2 2v14c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V5zm18 1L12 11.5 4 6v2l8 5.5 8-5.5V6zm0 12H4V9.5l8 5.5 8-5.5V18z" />
                     </svg>
                 </a>
+                &nbsp;&nbsp;
                 <a href="https://www.falmouth.ac.uk/staff/dr-daniel-zhang" title="University Profile" target="_blank">
                     <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24"
-                        fill="currentColor">
+                        fill="currentColor" class="shaking">
                         <path d="M12 3L1 9l11 6l9-4.91V17h2V9M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82Z" />
                     </svg>
                 </a>
@@ -133,10 +138,11 @@
                 <h2>Working Experience</h2>
                 <!-- FIX: Changed from divs to a ul with li.cv-item -->
                 <ul>
-                    <li class="cv-item">
+                    <li class="wk-item">
                         <div class="date">2023 - PRESENT</div>
-                        <strong>Senior Lecturer</strong>, Games Academy, Falmouth University
-                        <ul>
+                        <span class="wk-title"><strong>Senior Lecturer</strong>, Games Academy, Falmouth
+                            University</span>
+                        <ul class="wk-sublist">
                             <li>Course leader of MSc programme: <span class="italic-a">Artificial Intelligence for
                                     Games</span></li>
                             <li>Module leader of 2 MSc courses: <span class="italic-a">Classical Artificial
@@ -163,10 +169,11 @@
                             <li>Participant in departmental administrative tasks and other research activities</li>
                         </ul>
                     </li>
-                    <li class="cv-item">
+                    <li class="wk-item">
                         <div class="date">2019 - 2023</div>
-                        <strong>Senior Research Fellow</strong>, University of Southampton (Rolls-Royce UTC)
-                        <ul>
+                        <span class="wk-title"><strong>Senior Research Fellow</strong>, University of Southampton
+                            (Rolls-Royce UTC)</span>
+                        <ul class="wk-sublist">
                             <li>Won <span class="italic-a">Rolls-Royce CFD Conference Best Poster Award</span> in 2024
                             </li>
                             <li>Won <span class="italic-a">Rolls-Royce Pioneering Digital Award in 2020</span> for the
@@ -190,10 +197,11 @@
                             <li>Supervise and monitor PhD students' research projects</li>
                         </ul>
                     </li>
-                    <li class="cv-item">
+                    <li class="wk-item">
                         <div class="date">2012 - 2019</div>
-                        <strong>Research Fellow</strong>, University of Southampton (Rolls-Royce UTC)
-                        <ul>
+                        <span class="wk-title"><strong>Research Fellow</strong>, University of Southampton (Rolls-Royce
+                            UTC)</span>
+                        <ul class="wk-sublist">
                             <li>Architect and implement <span class="italic-a">PROMETHEUS</span> - an automated 3D
                                 combustor
                                 design and optimisation platform for Rolls-Royce, which has been deployed globally at 5
@@ -230,7 +238,7 @@
                             <li>Module leader: Machine Learning (COMP714)</li>
                             <li>Module leader: Computational Mathematics (COMP201)</li>
                             <li>Postgraduate Research Development Programme: Advanced
-                                Quantitative Data Analysis</li>
+                                Quantitative Data Analysis (RSC110)</li>
                             <br>
                             <li>Guest Lecturer (UoS): Introduction to Advanced Mechanical Engineering Science (SESM6039)
                             </li>
@@ -283,6 +291,7 @@
                     <div class="animate-card column">
                         <h3>Projects</h3>
                         <ul>
+                            <li>Agriculture Robot for Cornwall Daffodil Farm</li>
                             <li>ENGAN - AI-Driven Geometry Recognition & Generation for Gas Turbine Engines</li>
                             <li>COLIBRI - Collaboration Across Business Boundaries</li>
                             <li>PROMETHEUS - Automated 3D Combustor Design & Optimisation Platform</li>
@@ -349,13 +358,13 @@
                         <p>Graduated with distinction for outstanding academic performance in computer science.</p>
                     </li>
                     <li class="cv-item">
-                        <strong>First-Class Honours</strong>, Beijing University of Aeronautics and Astronautics (2004)
-                        <p>Graduated with first-class honours for exceptional academic achievement in electrical
-                            engineering.</p>
+                        <strong>First-Class Honours</strong>, Beijing University of Aeronautics and Astronautics (2000)
+                        <p>Awarded for exceptional academic achievement in University Entry Exam.</p>
                     </li>
                     <li class="cv-item">Invited Reviewer of ACM SIGCSE Virtual 2026, the 2nd ACM Virtual Global
                         Computing Education Conference (2026)</li>
-                    <li class="cv-item">Invited Reviewer of International Journal of Social Research Methodology</li>
+                    <li class="cv-item">Editorial Board Member of International Journal of Social Research Methodology
+                    </li>
                     <li class="cv-item">Research Integrity & Ethics Committee (RIEC) panel member</li>
                     <li class="cv-item">Research & Knowledge Exchange Committee (RKEC) panel member</li>
                     <li class="cv-item">Equality, Diversity & Inclusion (EDI) Working Group panel member</li>
@@ -376,9 +385,7 @@
         <section id="publications">
             <div class="container">
                 <h2>Selected Publications</h2>
-
                 <script id="pub-list" src="./components/pub_list.js"></script>
-
             </div>
         </section>
     </main>
@@ -389,19 +396,22 @@
         <div class="powered-by">
             <span style="font-size: 0.9em; margin-right: 10px;">Powered by</span>
             <a href="https://html.spec.whatwg.org/" title="HTML5">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="24" height="24">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="24" height="24"
+                    class="shaking">
                     <path fill-rule="evenodd"
                         d="M1.5 0h21l-1.9 21.2L12 24l-8.6-2.8L1.5 0zm15.6 5H6.3l.6 7.2h7.9l-.4 4.1-2.4.7-2.4-.7-.1-1.8H7.2l.3 4.4 4.5 1.2 4.5-1.2.7-8.7H9.7l-.2-2.3h7.7L17.1 5z" />
                 </svg>
             </a>
             <a href="https://www.w3.org/Style/CSS/Specs.html" title="CSS3">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="24" height="24">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="24" height="24"
+                    class="shaking">
                     <path fill-rule="evenodd"
                         d="M1.5 0h21l-1.9 21.2L12 24l-8.6-2.8L1.5 0zm16.3 4.7H6.2l.2 2.3h10l-.2 2.3H9.4l.2 2.3h7l-.4 4.1-2.7.7-2.7-.7-.2-1.8H7l.4 4.4 4.6 1.2 4.6-1.2 1.2-13.6z" />
                 </svg>
             </a>
             <a href="https://www.javascript.com/" title="JavaScript">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="24" height="24">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="24" height="24"
+                    class="shaking">
                     <path fill-rule="evenodd"
                         d="M1.5 0h21l-1.9 21.2L12 24l-8.6-2.8L1.5 0zm9.5 5v13H6.5v-2.5h2V5H11zm7.5 0h-5.5v7.5h3.5v2.5h-3.5v3h6V9H16V7.5h2.5V5z" />
                 </svg>

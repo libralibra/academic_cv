@@ -33,13 +33,14 @@ body {
     font-family: 'Inter', sans-serif;
     background-color: var(--bg-page);
     color: var(--text-main);
-    line-height: 1.7;
+    line-height: 1.5;
     transition: background 0.5s ease;
 }
 
 /* 3. Circular Avatar & Header */
 header#home {
-    height: 80vh;
+    /* vertical height */
+    height: 87vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -59,11 +60,12 @@ header#home {
 }
 
 .avatar-container {
-    width: 180px;
-    height: 180px;
+    width: 240px;
+    height: 240px;
     border-radius: 50%;
-    padding: 5px;
+    padding: 15px;
     background: linear-gradient(45deg, var(--primary), var(--accent));
+    margin-top: 30px;
     margin-bottom: 25px;
     box-shadow: var(--shadow);
 }
@@ -74,6 +76,41 @@ header#home {
     border-radius: 50%;
     object-fit: cover;
     background: #eee;
+    transition: transform 0.2s ease-in-out;
+}
+
+/* animation for shaking effect */
+@keyframes shake {
+    0% {
+        transform: translate(0, 0) rotate(0deg);
+    }
+
+    20% {
+        transform: translate(-5px, 0) rotate(-2deg);
+    }
+
+    40% {
+        transform: translate(5px, 0) rotate(2deg);
+    }
+
+    60% {
+        transform: translate(-5px, 0) rotate(-2deg);
+    }
+
+    80% {
+        transform: translate(5px, 0) rotate(2deg);
+    }
+
+    100% {
+        transform: translate(0, 0) rotate(0deg);
+    }
+}
+
+/* Apply shake on hover */
+.shaking:hover {
+    animation: shake 0.5s ease-in-out;
+    animation-iteration-count: 1;
+    /* Shake once per hover */
 }
 
 h1 {
@@ -91,7 +128,7 @@ h1 {
 }
 
 .social-links {
-    margin-top: 20px;
+    margin-top: 10px;
 }
 
 /* 4. Floating Action Button Toolbar (Icon-based) */
@@ -195,7 +232,8 @@ h3, h4 {
 }
 
 /* FIX: Change selector from .cv-item to li.cv-item */
-li.cv-item {
+li.cv-item,
+li.wk-item {
     list-style: none;
     margin-bottom: 10px;
     padding: 10px;
@@ -205,7 +243,8 @@ li.cv-item {
     background: transparent;
 }
 
-li.cv-item:hover {
+li.cv-item:hover,
+li.wk-item:hover {
     background: var(--bg-alt);
     border-left: 5px solid var(--accent);
     transform: translateX(10px);
@@ -259,7 +298,7 @@ nav {
     z-index: 1000;
     background: var(--nav-bg);
     backdrop-filter: blur(12px);
-    border-bottom: 1px solid var(--border);
+    border-bottom: 2px solid var(--border);
     padding: 15px;
     text-align: center;
 }
@@ -290,7 +329,7 @@ nav a.active {
     text-shadow: #333 0 0 1px;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 95%) {
     .dual-column {
         grid-template-columns: 1fr;
     }
